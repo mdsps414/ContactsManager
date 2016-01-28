@@ -1,0 +1,19 @@
+package ru.mdsps.contacts.core.base;
+
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+
+import ru.mdsps.contacts.core.settings.Settings;
+
+
+public abstract class BaseActivity extends AppCompatActivity {
+
+    Settings settings;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        settings = new Settings();
+        setTheme(settings.getAppTheme());
+        super.onCreate(savedInstanceState);
+    }
+}

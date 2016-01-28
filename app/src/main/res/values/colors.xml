@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- MySQL COLOR -->
+    <color name="colorPrimary">@color/md_indigo_500</color>
+    <color name="colorPrimaryDark">@color/md_indigo_700</color>
+    <color name="colorPrimaryLight">@color/md_indigo_100</color>
+    <color name="colorAccent">@color/md_orange_500</color>
+    <color name="colorControlNormal">@color/md_indigo_200</color>
+    <color name="colorControlActivated">@color/md_indigo_400</color>
+    <color name="colorSwitchThumbNormal">@color/md_indigo_300</color>
+    <color name="colorWindowBackground">@color/md_indigo_50</color>
+
+    <color name="progress_box_color">#33000000</color>
+    <color name="white_transparent_60">#78ffffff</color>
+
+    <color name="vector_drawable_color">@color/md_grey_200</color>
+    <color name="vector_drawable_color_darck">@color/md_grey_900</color>
+
+    <color name="contacts_letter_header_background">@color/md_blue_700</color>
+    <color name="contacts_letter_header_text">@color/md_grey_200</color>
+
+    <!-- FAB COLORS -->
+    <color name="fab_backgroundTint_green">@color/md_green_800</color>
+    <color name="fab_rippleColor_green">@color/md_green_400</color>
+    <color name="fab_backgroundTint_blue">@color/md_blue_800</color>
+    <color name="fab_rippleColor_blue">@color/md_blue_400</color>
+    <color name="fab_backgroundTint_indigo">@color/md_indigo_800</color>
+    <color name="fab_rippleColor_indigo">@color/md_indigo_400</color>
+
+
+
+</resources>

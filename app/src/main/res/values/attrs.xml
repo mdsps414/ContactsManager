@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="Theme">
+        <attr name="colorPrimaryLight" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="CircleTextView">
+        <attr name="text_color" format="integer"/>
+        <attr name="background_color" format="integer"/>
+        <attr name="text" format="string"/>
+        <attr name="text_size" format="dimension"/>
+        <attr name="border_color" format="integer"/>
+        <attr name="border_size" format="dimension"/>
+    </declare-styleable>
+
+</resources>
