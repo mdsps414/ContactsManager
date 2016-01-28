@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Контакты</string>
+    <string name="action_settings">Настройки</string>
+    <string name="title_activity_settings">Настройки</string>
+
+    <!-- DIALOG BUTTONS -->
+    <string name="dialog_button_ok">Ok</string>
+    <string name="dialog_button_cancel">Отмена</string>
+    <string name="dialog_button_yes">Да</string>
+    <string name="dialog_button_no">Нет</string>
+</resources>

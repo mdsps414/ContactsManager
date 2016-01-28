@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:better="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="NewApi"
+    android:viewportWidth="24"
+    better:viewportWidth="24"
+    android:viewportHeight="24"
+    better:viewportHeight="24"
+    android:width="24dp"
+    android:height="24dp">
+    <group
+        android:scaleX="0.6239009"
+        android:scaleY="0.65696"
+        android:translateX="5.529478"
+        better:translateX="5.529478"
+        android:translateY="-669.2443"
+        better:translateY="-669.2443">
+        <path
+            android:pathData="M10.553798 1031.6066l3.060838 -6.1159c0.683736 -1.2095 2.070098 -1.4644 2.946587 -0.084l3.139126 6.2451 6.428464 0.8869c1.956691 0.1855 2.323764 1.9054 0.947132 3.1571l-4.597342 4.4802 1.073416 6.3142c0.623225 3.249 -2.342102 2.3752 -2.913737 2.0204l-5.610452 -2.9676 -5.5896357 3.0369c-1.5059128 0.8682 -3.1685179 0.3552 -2.7631084 -2.0927l1.1184388 -6.2751 -4.5101333 -4.3929c-1.6286211 -1.2842 -1.1479373 -3.0442 0.9350985 -3.2773z"
+            better:pathData="M10.553798 1031.6066l3.060838 -6.1159c0.683736 -1.2095 2.070098 -1.4644 2.946587 -0.084l3.139126 6.2451 6.428464 0.8869c1.956691 0.1855 2.323764 1.9054 0.947132 3.1571l-4.597342 4.4802 1.073416 6.3142c0.623225 3.249 -2.342102 2.3752 -2.913737 2.0204l-5.610452 -2.9676 -5.5896357 3.0369c-1.5059128 0.8682 -3.1685179 0.3552 -2.7631084 -2.0927l1.1184388 -6.2751 -4.5101333 -4.3929c-1.6286211 -1.2842 -1.1479373 -3.0442 0.9350985 -3.2773z"
+            better:fillType="even_odd"
+            android:strokeLineJoin="miter"
+            better:strokeLineJoin="miter"
+            android:fillColor="#eeeeee"
+            better:fillColor="#eeeeee"
+            android:strokeLineCap="butt"
+            better:strokeLineCap="butt"
+            android:strokeMiterLimit="4"
+            better:strokeMiterLimit="4" />
+    </group>
+    <path
+        android:pathData="M0.97175141 14.712319l3.03672319 0 0 -3.006356 1.97387 0 0 3.006356 2.9759887 0 0 2.004237 -2.9759887 0 0 3.006356 -1.97387 0 0 -3.006356 -3.03672319 0z"
+        better:pathData="M0.97175141 14.712319l3.03672319 0 0 -3.006356 1.97387 0 0 3.006356 2.9759887 0 0 2.004237 -2.9759887 0 0 3.006356 -1.97387 0 0 -3.006356 -3.03672319 0z"
+        better:fillType="even_odd"
+        android:strokeLineJoin="miter"
+        better:strokeLineJoin="miter"
+        android:fillColor="#eeeeee"
+        better:fillColor="#eeeeee"
+        android:strokeLineCap="butt"
+        better:strokeLineCap="butt"
+        android:strokeMiterLimit="4"
+        better:strokeMiterLimit="4" />
+</vector>

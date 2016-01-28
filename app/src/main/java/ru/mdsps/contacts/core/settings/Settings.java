@@ -49,12 +49,12 @@ public class Settings {
     // NAME SETTINGS
     private final String NAME_ALT = "NAME_ALTERNATIVE";
 
-    public boolean isNameAlt(){
-        return preferences.getBoolean(NAME_ALT, true);
+    public int getNameAlt(){
+        return preferences.getInt(NAME_ALT,0);
     }
 
-    public void setNameAlt(boolean val){
-        editor.putBoolean(NAME_ALT, val);
+    public void setNameAlt(int val){
+        editor.putInt(NAME_ALT, val).commit();
     }
 
 

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="settings_name_type_title">Отображение имени контакта</string>
+    <string-array name="settings_name_type">
+        <item>Иван Иванович Иванов</item>
+        <item>Иванов, Иван Иванович</item>
+    </string-array>
+</resources>
