@@ -6,6 +6,14 @@
     <dimen name="appbar_padding_top">0dp</dimen>
 
     <!-- FORM SETTINGS -->
+    <dimen name="settings_group_title_height">40dp</dimen>
+    <dimen name="settings_group_title_icon_width">24dp</dimen>
+    <dimen name="settings_group_title_icon_height">24dp</dimen>
+    <dimen name="settings_group_title_icon_horizontal_margin">16dp</dimen>
+    <dimen name="settings_group_title_icon_vertical_margin">8dp</dimen>
+    <dimen name="settings_group_title_vertical_margin">8dp</dimen>
+    <dimen name="settings_group_title_text_size">16sp</dimen>
+
     <dimen name="settings_item_heights">56dp</dimen>
     <dimen name="settings_item_text_box_horizontal_margin">16dp</dimen>
     <dimen name="settings_item_change_box_width">56dp</dimen>
@@ -13,4 +21,6 @@
     <dimen name="settings_item_change_box_padding">16dp</dimen>
     <dimen name="settings_item_title_text_size">16sp</dimen>
     <dimen name="settings_item_description_text_size">12sp</dimen>
+
+
 </resources>

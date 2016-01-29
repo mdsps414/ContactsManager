@@ -1,8 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <!-- GENERAL SETTINGS -->
+    <string name="settings_general_group_title">Основные настройки</string>
+    <string name="settings_general_theme_title">Тема</string>
+    <string-array name="settings_general_theme">
+        <item>По умолчанию (Индиго)</item>
+        <item>Зеленая</item>
+    </string-array>
+    <string name="settings_general_show_account_title">Выбор акаунтов</string>
+    <string name="settings_general_show_account_desc">Выбор акаунтов, контакты которых будут отображены</string>
+
+    <!-- CONTACT SETTINGS -->
     <string name="settings_name_type_title">Отображение имени контакта</string>
     <string-array name="settings_name_type">
         <item>Иван Иванович Иванов</item>
         <item>Иванов, Иван Иванович</item>
     </string-array>
+    <string name="settings_contact_item_type_tytle">Выберете тип карточки контакта</string>
+    <string-array name="settings_contact_item_type">
+        <item>С алфавитным указателем</item>
+        <item>С кнопкой вызова</item>
+    </string-array>
+    <string name="settings_contact_item_type_alphabetic">С алфавитным указателем</string>
+    <string name="settings_contact_item_type_button">С кнопкой вызова</string>
+    <string name="settings_show_call_button_title">Отображать кнопку</string>
+    <string name="settings_show_call_button_desc">Отображать кнопку вызова в карточке контакта</string>
 </resources>

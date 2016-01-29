@@ -1,8 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- GENERAL SETTINGS -->
+    <string name="settings_general_group_title">General settings</string>
+    <string name="settings_general_theme_title">Theme</string>
+    <string-array name="settings_general_theme">
+        <item>Default(Indigo)</item>
+        <item>Green</item>
+    </string-array>
+    <string name="settings_general_show_account_title">Show account</string>
+    <string name="settings_general_show_account_desc">Show contacts from account</string>
+
+    <!-- CONTACT SETTINGS -->
+    <string name="settings_contact_group_title">Contact settings</string>
     <string name="settings_name_type_title">Select name type</string>
     <string-array name="settings_name_type">
         <item>Ivan Ivanovich Ivanov</item>
         <item>Ivanov, Ivan Ivanovich</item>
     </string-array>
+    <string name="settings_contact_item_type_tytle">Select contact item type</string>
+    <string-array name="settings_contact_item_type">
+        <item>Alphabetic</item>
+        <item>Button</item>
+    </string-array>
+    <string name="settings_contact_item_type_alphabetic">Cards with an alphabetical index</string>
+    <string name="settings_contact_item_type_button">Cards with call button</string>
+    <string name="settings_show_call_button_title">Show call button</string>
+    <string name="settings_show_call_button_desc">Show call button from contact item</string>
 </resources>

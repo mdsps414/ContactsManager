@@ -33,7 +33,7 @@ public class Settings {
     }
 
     public void setAppTheme(int theme){
-        editor.putInt(THEME, theme).commit();
+        editor.putInt(THEME, theme).apply();
     }
 
     public Set<String> getShowAccounts(){
@@ -41,20 +41,32 @@ public class Settings {
     }
 
     public void setShowAccounts(Set<String> accounts){
-        editor.putStringSet(SHOW_ACCOUNTS, accounts).commit();
+        editor.putStringSet(SHOW_ACCOUNTS, accounts).apply();
     }
 
 
 
-    // NAME SETTINGS
+    // CONTACT SETTINGS
     private final String NAME_ALT = "NAME_ALTERNATIVE";
-
     public int getNameAlt(){
         return preferences.getInt(NAME_ALT,0);
     }
-
     public void setNameAlt(int val){
-        editor.putInt(NAME_ALT, val).commit();
+        editor.putInt(NAME_ALT, val).apply();
+    }
+
+    private final String CONTACT_ITEM_TYPE = "CONTACT_ITEM_TYPE";
+    public int getItemType(){
+        return preferences.getInt(CONTACT_ITEM_TYPE,0);
+    }
+    public void setItemType(int val){
+        editor.putInt(CONTACT_ITEM_TYPE, val).apply();
+    }
+
+    private final String SHOW_CALL_BUTTON = "SHOW_CALL_BUTTON";
+    public boolean showCallButton(){ return preferences.getBoolean(SHOW_CALL_BUTTON, false); }
+    public void setShowCallButton(boolean val){
+        editor.putBoolean(SHOW_CALL_BUTTON, val).apply();
     }
 
 

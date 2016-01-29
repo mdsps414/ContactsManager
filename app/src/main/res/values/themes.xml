@@ -22,7 +22,18 @@
         <item name="colorControlNormal">@color/colorControlNormal</item>
         <item name="colorControlActivated">@color/colorControlActivated</item>
         <item name="colorSwitchThumbNormal">@color/colorSwitchThumbNormal</item>
-        <item name="android:windowBackground">@color/colorWindowBackground</item>
+        <item name="colorWindowBackground">@color/colorWindowBackground</item>
+    </style>
+
+    <style name="AppTheme.Green">
+        <item name="colorPrimary">@color/md_green_500</item>
+        <item name="colorPrimaryDark">@color/md_green_700</item>
+        <item name="colorPrimaryLight">@color/md_green_100</item>
+        <item name="colorAccent">@color/md_amber_500</item>
+        <item name="colorControlNormal">@color/md_green_200</item>
+        <item name="colorControlActivated">@color/md_green_400</item>
+        <item name="colorSwitchThumbNormal">@color/md_green_300</item>
+        <item name="colorWindowBackground">@color/md_green_50</item>
     </style>
 
     <style name="AppTheme.NoActionBar">
