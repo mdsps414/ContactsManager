@@ -2,7 +2,8 @@
 <resources>
     <!-- GENERAL SETTINGS -->
     <string name="settings_general_group_title">General settings</string>
-    <string name="settings_general_theme_title">Theme</string>
+    <string name="settings_general_theme_title">Select theme</string>
+    <string name="settings_general_theme_colors">Colors</string>
     <string-array name="settings_general_theme">
         <item>Default(Indigo)</item>
         <item>Green</item>

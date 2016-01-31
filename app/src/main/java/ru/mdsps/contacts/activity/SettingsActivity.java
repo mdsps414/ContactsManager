@@ -1,7 +1,10 @@
 package ru.mdsps.contacts.activity;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.support.annotation.ColorInt;
+import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
@@ -14,6 +17,7 @@ import android.widget.Toast;
 
 import com.afollestad.materialdialogs.DialogAction;
 import com.afollestad.materialdialogs.MaterialDialog;
+import com.afollestad.materialdialogs.color.ColorChooserDialog;
 import com.afollestad.materialdialogs.simplelist.MaterialSimpleListAdapter;
 import com.afollestad.materialdialogs.simplelist.MaterialSimpleListItem;
 
@@ -30,12 +34,14 @@ import ru.mdsps.contacts.core.settings.Settings;
 import ru.mdsps.contacts.core.settings.SettingsAccountsAdapter;
 import ru.mdsps.contacts.core.utility.AppUtility;
 
-public class SettingsActivity extends BaseActivity implements View.OnClickListener{
+public class SettingsActivity extends BaseActivity implements View.OnClickListener,
+        ColorChooserDialog.ColorCallback{
 
     LinearLayout selTheme, selAccount, selNameType, selItemType, selShowCallButton;
     TextView txtTheme, txtNameType, txtItemType;
     CheckBox selShowCallButtonCheck;
     Settings settings;
+    private int primaryPreselect;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,20 +60,21 @@ public class SettingsActivity extends BaseActivity implements View.OnClickListen
     @Override
     public void onStart(){
         super.onStart();
-        String[] themes = getResources().getStringArray(R.array.settings_general_theme);
-        txtTheme.setText(themes[settings.getAppTheme()]);
+        txtTheme.setText(AppUtility.getThemeName(settings.getAppTheme()));
+        primaryPreselect = Color.parseColor("#3f51b5");
         String[] nameTypes = getResources().getStringArray(R.array.settings_name_type);
         txtNameType.setText(nameTypes[settings.getNameAlt()]);
         String[] itemTypes = getResources().getStringArray(R.array.settings_contact_item_type);
         txtItemType.setText(itemTypes[settings.getItemType()]);
         selShowCallButtonCheck.setChecked(settings.showCallButton());
+
     }
 
     @Override
     public void onClick(View v) {
         switch(v.getId()){
             case R.id.settings_theme: // Настройка темы приложения
-                new MaterialDialog.Builder(this)
+                /*new MaterialDialog.Builder(this)
                         .title(R.string.settings_general_theme_title)
                         .items(R.array.settings_general_theme)
                         .itemsCallbackSingleChoice(settings.getAppTheme(), new MaterialDialog.ListCallbackSingleChoice() {
@@ -79,6 +86,10 @@ public class SettingsActivity extends BaseActivity implements View.OnClickListen
                             }
                         })
                         .positiveText(R.string.dialog_button_ok)
+                        .show();*/
+                new ColorChooserDialog.Builder(this, R.string.settings_general_theme_title)
+                        .titleSub(R.string.settings_general_theme_colors)
+                        .preselect(primaryPreselect)
                         .show();
                 break;
             case R.id.settings_accounts: // Настройка аккаунтов, данные которыых будут выводится
@@ -112,6 +123,7 @@ public class SettingsActivity extends BaseActivity implements View.OnClickListen
                         })
                         .positiveText(R.string.dialog_button_ok)
                         .show();
+
                 break;
             case R.id.settings_item_type: // Настройка вида записи контакта
                 new MaterialDialog.Builder(this)
@@ -163,5 +175,13 @@ public class SettingsActivity extends BaseActivity implements View.OnClickListen
 
 
         return null;
+    }
+
+    @Override
+    public void onColorSelection(@NonNull ColorChooserDialog dialog, @ColorInt int selectedColor) {
+        settings.setAppTheme(selectedColor);
+        Intent reset = new Intent(SettingsActivity.this, SettingsActivity.class);
+        startActivity(reset);
+        finish();
     }
 }

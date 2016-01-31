@@ -3,7 +3,8 @@
 
     <!-- GENERAL SETTINGS -->
     <string name="settings_general_group_title">Основные настройки</string>
-    <string name="settings_general_theme_title">Тема</string>
+    <string name="settings_general_theme_title">Выбор темы</string>
+    <string name="settings_general_theme_colors">Цвет</string>
     <string-array name="settings_general_theme">
         <item>По умолчанию (Индиго)</item>
         <item>Зеленая</item>

@@ -23,8 +23,31 @@ public class AppUtility {
             R.style.AppTheme_Green
     };
 
-    public static int getThemeResource(int theme){
-        return themeList[theme];
+    public static int getThemeResource(int primaryColor){
+        Context context = AppContacts.getContext();
+        int[] arrPrimaryColor = context.getResources().getIntArray(R.array.theme_color);
+        int k = 0;
+        for(int i = 0; i < arrPrimaryColor.length; i++){
+            int pColor = arrPrimaryColor[i];
+            if(pColor == primaryColor){
+                k = i;
+            }
+        }
+        return themeList[k];
+    }
+
+    public static String getThemeName(int primaryColor){
+        Context context = AppContacts.getContext();
+        int[] arrPrimaryColor = context.getResources().getIntArray(R.array.theme_color);
+        String[] themes = context.getResources().getStringArray(R.array.settings_general_theme);
+        int k = 0;
+        for(int i = 0; i < arrPrimaryColor.length; i++){
+            int pColor = arrPrimaryColor[i];
+            if(pColor == primaryColor){
+                k = i;
+            }
+        }
+        return themes[k];
     }
 
     public static ArrayList<AccountData> getAccountList(){
@@ -81,4 +104,6 @@ public class AppUtility {
         cur.close();
         return res;
     }
+
+
 }
