@@ -18,6 +18,7 @@ public class AccountData {
     private String mType;
     private CharSequence mTypeLabel;
     private Drawable mIcon;
+    private String mNameType;
 
     public AccountData(String name, AuthenticatorDescription description) {
         mName = name;
@@ -50,7 +51,15 @@ public class AccountData {
                 //mIcon = context.getResources().getDrawable(android.R.drawable.sym_def_app_icon);
                 mIcon = ContextCompat.getDrawable(context, android.R.drawable.sym_def_app_icon);
             }
+            mNameType = mName + "~" + mType;
         }
+    }
+
+    public AccountData(String name, String type, String label, Drawable icon){
+        mName = name;
+        mType = type;
+        mTypeLabel = label;
+        mIcon = icon;
     }
 
     public String getName() {
@@ -72,4 +81,6 @@ public class AccountData {
     public String toString() {
         return mName;
     }
+
+    public String getNameType() { return mNameType; }
 }

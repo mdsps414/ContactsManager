@@ -3,6 +3,8 @@ package ru.mdsps.contacts.core.settings;
 import android.content.Context;
 import android.content.SharedPreferences;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Set;
 
 import ru.mdsps.contacts.AppContacts;
@@ -36,12 +38,28 @@ public class Settings {
         editor.putInt(THEME, theme).apply();
     }
 
-    public Set<String> getShowAccounts(){
-        return preferences.getStringSet(SHOW_ACCOUNTS, null);
+    public ArrayList<String> getShowAccounts(){
+        String sha = preferences.getString(SHOW_ACCOUNTS, null);
+        ArrayList<String> p = new ArrayList<>();
+        if(sha != null){
+            String[] shaa = sha.split("~");
+            for(String it : shaa){
+                p.add(it);
+            }
+            return p;
+        }
+        return null;
     }
 
-    public void setShowAccounts(Set<String> accounts){
-        editor.putStringSet(SHOW_ACCOUNTS, accounts).apply();
+    public void setShowAccounts(ArrayList<String> accounts){
+        StringBuilder sb = new StringBuilder();
+        for(int i = 0; i < accounts.size(); i++){
+            sb.append(accounts.get(i));
+            if(i < accounts.size()-1) {
+                sb.append("~");
+            }
+        }
+        editor.putString(SHOW_ACCOUNTS, sb.toString()).apply();
     }
 
 

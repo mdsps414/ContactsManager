@@ -22,5 +22,11 @@
     <dimen name="settings_item_title_text_size">16sp</dimen>
     <dimen name="settings_item_description_text_size">12sp</dimen>
 
+    <dimen name="settings_item_account_height">60dp</dimen>
+    <dimen name="settings_item_account_check_frame_width">72dp</dimen>
+    <dimen name="settings_item_account_check_box_left_margin">16dp</dimen>
+    <dimen name="settings_item_account_icon_size">24dp</dimen>
+    <dimen name="settings_item_account_icon_box_width">56dp</dimen>
+    <dimen name="settings_item_account_text_size">13sp</dimen>
 
 </resources>

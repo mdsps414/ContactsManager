@@ -35,7 +35,6 @@ public class AppContacts extends Application {
 
     private static Context context;
     private HashMap<Integer, Group> mGroupList;
-    private ArrayList<AccountData> mAccountList;
 
 
 
@@ -54,9 +53,6 @@ public class AppContacts extends Application {
             throw new AssertionError();
         }
 
-        // Обновляем список аккаунтов устройства
-        changeAccountList();
-
         // Обновляем список групп;
         changeGroupList();
     }
@@ -65,7 +61,7 @@ public class AppContacts extends Application {
         return context;
     }
 
-    public HashMap<Integer, Group> getmGroupList(){
+    public HashMap<Integer, Group> getGroupList(){
         return mGroupList;
     }
 
@@ -91,36 +87,5 @@ public class AppContacts extends Application {
         }
         group.close();
     }
-
-    public ArrayList<AccountData> getAccountList(){
-        return mAccountList;
-    }
-
-    public void changeAccountList(){
-        AccountManager am = AccountManager.get(this);
-        Account[] a = am.getAccounts();
-        mAccountList = new ArrayList<>();
-
-        AuthenticatorDescription[] accountTypes = am.getAuthenticatorTypes();
-        for (int i = 0; i < a.length; i++) {
-            String systemAccountType = a[i].type;
-            AuthenticatorDescription ad = getAuthenticatorDescription(systemAccountType,
-                    accountTypes);
-            AccountData data = new AccountData(a[i].name, ad);
-            mAccountList.add(data);
-        }
-    }
-
-    private static AuthenticatorDescription getAuthenticatorDescription(String type,
-                                                                        AuthenticatorDescription[] dictionary) {
-        for (int i = 0; i < dictionary.length; i++) {
-            if (dictionary[i].type.equals(type)) {
-                return dictionary[i];
-            }
-        }
-        // No match found
-        throw new RuntimeException("Unable to find matching authenticator");
-    }
-
 
 }

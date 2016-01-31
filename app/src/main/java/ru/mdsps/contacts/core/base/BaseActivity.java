@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
 import ru.mdsps.contacts.core.settings.Settings;
+import ru.mdsps.contacts.core.utility.AppUtility;
 
 
 public abstract class BaseActivity extends AppCompatActivity {
@@ -13,7 +14,7 @@ public abstract class BaseActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         settings = new Settings();
-        setTheme(settings.getAppTheme());
+        setTheme(AppUtility.getThemeResource(settings.getAppTheme()));
         super.onCreate(savedInstanceState);
     }
 }
