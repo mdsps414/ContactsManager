@@ -41,7 +41,7 @@ public class Settings {
     public ArrayList<String> getShowAccounts(){
         String sha = preferences.getString(SHOW_ACCOUNTS, null);
         ArrayList<String> p = new ArrayList<>();
-        if(sha != null){
+        if(sha != null && sha != "" && !sha.isEmpty()){
             String[] shaa = sha.split("~");
             for(String it : shaa){
                 p.add(it);

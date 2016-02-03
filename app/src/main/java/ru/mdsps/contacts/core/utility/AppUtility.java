@@ -19,13 +19,30 @@ import ru.mdsps.contacts.core.model.AccountData;
 public class AppUtility {
 
     private static int[] themeList = new int[]{
-            R.style.AppTheme_Standard,
-            R.style.AppTheme_Green
+            R.style.AppTheme_Red,
+            R.style.AppTheme_Pink,
+            R.style.AppTheme_Purple,
+            R.style.AppTheme_Deep_Purple,
+            R.style.AppTheme_Indigo,
+            R.style.AppTheme_Blue,
+            R.style.AppTheme_Light_Blue,
+            R.style.AppTheme_Cyan,
+            R.style.AppTheme_Teal,
+            R.style.AppTheme_Green,
+            R.style.AppTheme_Light_Green,
+            R.style.AppTheme_Lime,
+            R.style.AppTheme_Yellow,
+            R.style.AppTheme_Amber,
+            R.style.AppTheme_Orange,
+            R.style.AppTheme_Deep_Orange,
+            R.style.AppTheme_Brown,
+            R.style.AppTheme_Grey,
+            R.style.AppTheme_Blue_Grey
     };
 
     public static int getThemeResource(int primaryColor){
         Context context = AppContacts.getContext();
-        int[] arrPrimaryColor = context.getResources().getIntArray(R.array.theme_color);
+        int[] arrPrimaryColor = context.getResources().getIntArray(R.array.settings_theme_color_array);
         int k = 0;
         for(int i = 0; i < arrPrimaryColor.length; i++){
             int pColor = arrPrimaryColor[i];
@@ -38,7 +55,7 @@ public class AppUtility {
 
     public static String getThemeName(int primaryColor){
         Context context = AppContacts.getContext();
-        int[] arrPrimaryColor = context.getResources().getIntArray(R.array.theme_color);
+        int[] arrPrimaryColor = context.getResources().getIntArray(R.array.settings_theme_color_array);
         String[] themes = context.getResources().getStringArray(R.array.settings_general_theme);
         int k = 0;
         for(int i = 0; i < arrPrimaryColor.length; i++){

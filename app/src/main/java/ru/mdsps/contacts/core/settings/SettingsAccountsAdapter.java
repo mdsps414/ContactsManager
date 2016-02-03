@@ -17,18 +17,18 @@ import ru.mdsps.contacts.R;
 import ru.mdsps.contacts.core.model.AccountData;
 import ru.mdsps.contacts.core.utility.AppUtility;
 
-public class SettingsAccountsAdapter extends BaseAdapter implements View.OnClickListener{
+public class SettingsAccountsAdapter extends BaseAdapter{
 
     private ArrayList<String> mSelectedItem;
     private ArrayList<AccountData> mBaseItem;
-    private ArrayList<String> mPhoneBookItem;
+    private OnElementClickListener mListener;
     private Context mContext;
 
-    public SettingsAccountsAdapter(ArrayList<String> selected){
+    public SettingsAccountsAdapter(ArrayList<String> selected, OnElementClickListener listener){
         mSelectedItem = selected;
         mBaseItem = AppUtility.getAccountList();
-        mPhoneBookItem = AppUtility.getPhoneBookAccountList();
         mContext = AppContacts.getContext();
+        mListener = listener;
     }
 
 
@@ -68,46 +68,26 @@ public class SettingsAccountsAdapter extends BaseAdapter implements View.OnClick
         acc_icon.setImageDrawable(item.getIcon());
         acc_check.setChecked(isChecked(item));
 
-        if(!isPhoneBook(item)){
-            acc_item.setEnabled(false);
-            acc_check.setEnabled(false);
-            acc_name.setEnabled(false);
-            acc_desc.setEnabled(false);
-            acc_icon.setEnabled(false);
-        } else {
-            acc_item.setEnabled(true);
-            acc_check.setEnabled(true);
-            acc_name.setEnabled(true);
-            acc_desc.setEnabled(true);
-            acc_icon.setEnabled(true);
-        }
-
         acc_item.setTag(item);
-        acc_item.setOnClickListener(this);
+        acc_item.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CheckBox acc_check = (CheckBox) v.findViewById(R.id.acc_item_check);
+                acc_check.setChecked(!acc_check.isChecked());
+                if(acc_check.isChecked()) {
+                    mListener.onElementClick(AppContacts.SETTINGS_LISTENER_ACCOUNT_SHOW, v);
+                } else {
+                    mListener.onElementClick(AppContacts.SETTINGS_LISTENER_ACCOUNT_HIDE, v);
+                }
+            }
+        });
 
         return v;
-    }
-
-    @Override
-    public void onClick(View v) {
-        AccountData item = (AccountData) v.getTag();
-        CheckBox acc_check = (CheckBox) v.findViewById(R.id.acc_item_check);
-        if(!isPhoneBook(item)){
-            acc_check.setChecked(!acc_check.isChecked());
-        }
     }
 
     private boolean isChecked(AccountData item){
         String mVal = item.getNameType();
         if(mSelectedItem != null && mSelectedItem.contains(mVal)){
-            return true;
-        }
-        return false;
-    }
-
-    private boolean isPhoneBook(AccountData item){
-        String mVal = item.getNameType();
-        if(mPhoneBookItem != null && mPhoneBookItem.contains(mVal)){
             return true;
         }
         return false;

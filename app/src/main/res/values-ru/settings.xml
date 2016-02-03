@@ -6,8 +6,25 @@
     <string name="settings_general_theme_title">Выбор темы</string>
     <string name="settings_general_theme_colors">Цвет</string>
     <string-array name="settings_general_theme">
-        <item>По умолчанию (Индиго)</item>
-        <item>Зеленая</item>
+        <item>Красная тема</item>
+        <item>Розовая тема</item>
+        <item>Фиолетовая тема</item>
+        <item>Тёмно-фиолетовая тема</item>
+        <item>Тема индиго</item>
+        <item>Синяя тема</item>
+        <item>Светло синяя тема</item>
+        <item>Голубая тема</item>
+        <item>Бирюзовая тема</item>
+        <item>Зелёная тема</item>
+        <item>Светло зелёная тема</item>
+        <item>Лимонная тема</item>
+        <item>Жёлтая тема</item>
+        <item>Янтарная тема</item>
+        <item>Оранжевая тема</item>
+        <item>Тёмно-оранжевая тема</item>
+        <item>Коричневая тема</item>
+        <item>Серая тема</item>
+        <item>Сине-серая тема</item>
     </string-array>
     <string name="settings_general_show_account_title">Выбор акаунтов</string>
     <string name="settings_general_show_account_desc">Выбор акаунтов, контакты которых будут отображены</string>

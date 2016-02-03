@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ru.mdsps.contacts.core.views.FillListView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/list"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="false"
+    android:gravity="center"
+    android:padding="16dp"
+    android:stretchMode="columnWidth"
+    android:divider="@drawable/transparent_divider"
+    android:dividerHeight="4dp" />

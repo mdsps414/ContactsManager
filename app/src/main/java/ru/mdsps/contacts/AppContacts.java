@@ -33,6 +33,12 @@ public class AppContacts extends Application {
     public static final int CNN_CONTACT_FRAGMENT = 101;
     public static final int CNN_CONTACT_CHANGE_FRAGMENT = 102;
 
+    // SETTINGS LISTENER TYPE
+    public static final int SETTINGS_LISTENER_COLOR = 0;
+    public static final int SETTINGS_LISTENER_ACCOUNT_SHOW = 1;
+    public static final int SETTINGS_LISTENER_ACCOUNT_HIDE = -1;
+
+
     private static Context context;
     private HashMap<Integer, Group> mGroupList;
 

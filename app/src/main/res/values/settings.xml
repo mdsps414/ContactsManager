@@ -5,8 +5,25 @@
     <string name="settings_general_theme_title">Select theme</string>
     <string name="settings_general_theme_colors">Colors</string>
     <string-array name="settings_general_theme">
-        <item>Default(Indigo)</item>
-        <item>Green</item>
+        <item>Red Theme</item>
+        <item>Pink Theme</item>
+        <item>Purole Theme</item>
+        <item>Deep Purple Theme</item>
+        <item>Indigo Theme</item>
+        <item>Blue Theme</item>
+        <item>Light Blue Theme</item>
+        <item>Cyan Theme</item>
+        <item>Teal Theme</item>
+        <item>Green Theme</item>
+        <item>Light Green Theme</item>
+        <item>Lime Theme</item>
+        <item>Yellow Theme</item>
+        <item>Amber Theme</item>
+        <item>Orange Theme</item>
+        <item>Deep Orange Theme</item>
+        <item>Brown Theme</item>
+        <item>Grey Theme</item>
+        <item>Blue Grey Theme</item>
     </string-array>
     <string name="settings_general_show_account_title">Show account</string>
     <string name="settings_general_show_account_desc">Show contacts from account</string>

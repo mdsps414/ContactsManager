@@ -4,14 +4,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="@dimen/settings_item_account_height"
-    android:layout_marginTop="4dp"
-    android:layout_marginBottom="4dp"
     app:rv_color="@color/md_teal_300"
     app:rv_type="rectangle">
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="@dimen/settings_item_account_height"
         android:id="@+id/acc_item">
 
         <LinearLayout
@@ -44,7 +42,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textAppearance="?android:attr/textAppearanceLargeInverse"
                     android:text="Large Text"
                     android:id="@+id/acc_item_name"
                     android:textSize="@dimen/settings_item_account_text_size" />

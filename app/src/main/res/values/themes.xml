@@ -15,25 +15,223 @@
     </style>
 
     <style name="AppTheme.Standard">
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorPrimaryLight">@color/colorPrimaryLight</item>
-        <item name="colorAccent">@color/colorAccent</item>
-        <item name="colorControlNormal">@color/colorControlNormal</item>
-        <item name="colorControlActivated">@color/colorControlActivated</item>
-        <item name="colorSwitchThumbNormal">@color/colorSwitchThumbNormal</item>
-        <item name="colorWindowBackground">@color/colorWindowBackground</item>
+        <item name="colorPrimary">@color/md_indigo_500</item>
+        <item name="colorPrimaryDark">@color/md_indigo_700</item>
+        <item name="colorPrimaryLight">@color/md_indigo_100</item>
+        <item name="colorAccent">@color/md_amber_500</item>
+        <item name="colorControlNormal">@color/md_indigo_200</item>
+        <item name="colorControlActivated">@color/md_indigo_400</item>
+        <item name="colorSwitchThumbNormal">@color/md_indigo_300</item>
+        <item name="colorWindowBackground">@color/md_indigo_50</item>
+    </style>
+
+    <style name="AppTheme.Red">
+        <item name="colorPrimary">@color/md_red_500</item>
+        <item name="colorPrimaryDark">@color/md_red_700</item>
+        <item name="colorPrimaryLight">@color/md_red_100</item>
+        <item name="colorAccent">@color/md_yellow_700</item>
+        <item name="colorControlNormal">@color/md_red_200</item>
+        <item name="colorControlActivated">@color/md_red_400</item>
+        <item name="colorSwitchThumbNormal">@color/md_red_300</item>
+        <item name="colorWindowBackground">@color/md_red_50</item>
+    </style>
+
+    <style name="AppTheme.Pink">
+        <item name="colorPrimary">@color/md_pink_500</item>
+        <item name="colorPrimaryDark">@color/md_pink_700</item>
+        <item name="colorPrimaryLight">@color/md_pink_100</item>
+        <item name="colorAccent">@color/md_amber_700</item>
+        <item name="colorControlNormal">@color/md_pink_200</item>
+        <item name="colorControlActivated">@color/md_pink_400</item>
+        <item name="colorSwitchThumbNormal">@color/md_pink_300</item>
+        <item name="colorWindowBackground">@color/md_pink_50</item>
+    </style>
+
+    <style name="AppTheme.Purple">
+        <item name="colorPrimary">@color/md_purple_500</item>
+        <item name="colorPrimaryDark">@color/md_purple_700</item>
+        <item name="colorPrimaryLight">@color/md_purple_100</item>
+        <item name="colorAccent">@color/md_amber_700</item>
+        <item name="colorControlNormal">@color/md_purple_200</item>
+        <item name="colorControlActivated">@color/md_purple_400</item>
+        <item name="colorSwitchThumbNormal">@color/md_purple_300</item>
+        <item name="colorWindowBackground">@color/md_purple_50</item>
+    </style>
+
+    <style name="AppTheme.Deep_Purple">
+        <item name="colorPrimary">@color/md_deep_purple_500</item>
+        <item name="colorPrimaryDark">@color/md_deep_purple_700</item>
+        <item name="colorPrimaryLight">@color/md_deep_purple_100</item>
+        <item name="colorAccent">@color/md_amber_700</item>
+        <item name="colorControlNormal">@color/md_deep_purple_200</item>
+        <item name="colorControlActivated">@color/md_deep_purple_400</item>
+        <item name="colorSwitchThumbNormal">@color/md_deep_purple_300</item>
+        <item name="colorWindowBackground">@color/md_deep_purple_50</item>
+    </style>
+
+    <style name="AppTheme.Indigo">
+        <item name="colorPrimary">@color/md_indigo_500</item>
+        <item name="colorPrimaryDark">@color/md_indigo_700</item>
+        <item name="colorPrimaryLight">@color/md_indigo_100</item>
+        <item name="colorAccent">@color/md_amber_500</item>
+        <item name="colorControlNormal">@color/md_indigo_200</item>
+        <item name="colorControlActivated">@color/md_indigo_400</item>
+        <item name="colorSwitchThumbNormal">@color/md_indigo_300</item>
+        <item name="colorWindowBackground">@color/md_indigo_50</item>
+    </style>
+
+    <style name="AppTheme.Blue">
+        <item name="colorPrimary">@color/md_blue_500</item>
+        <item name="colorPrimaryDark">@color/md_indigo_700</item>
+        <item name="colorPrimaryLight">@color/md_indigo_100</item>
+        <item name="colorAccent">@color/md_amber_500</item>
+        <item name="colorControlNormal">@color/md_indigo_200</item>
+        <item name="colorControlActivated">@color/md_indigo_400</item>
+        <item name="colorSwitchThumbNormal">@color/md_indigo_300</item>
+        <item name="colorWindowBackground">@color/md_indigo_50</item>
+    </style>
+
+    <style name="AppTheme.Light_Blue">
+        <item name="colorPrimary">@color/md_light_blue_500</item>
+        <item name="colorPrimaryDark">@color/md_light_blue_700</item>
+        <item name="colorPrimaryLight">@color/md_light_blue_100</item>
+        <item name="colorAccent">@color/md_amber_500</item>
+        <item name="colorControlNormal">@color/md_light_blue_200</item>
+        <item name="colorControlActivated">@color/md_light_blue_400</item>
+        <item name="colorSwitchThumbNormal">@color/md_light_blue_300</item>
+        <item name="colorWindowBackground">@color/md_light_blue_50</item>
+    </style>
+
+    <style name="AppTheme.Cyan">
+        <item name="colorPrimary">@color/md_cyan_500</item>
+        <item name="colorPrimaryDark">@color/md_cyan_700</item>
+        <item name="colorPrimaryLight">@color/md_cyan_100</item>
+        <item name="colorAccent">@color/md_amber_500</item>
+        <item name="colorControlNormal">@color/md_cyan_200</item>
+        <item name="colorControlActivated">@color/md_cyan_400</item>
+        <item name="colorSwitchThumbNormal">@color/md_cyan_300</item>
+        <item name="colorWindowBackground">@color/md_cyan_50</item>
+    </style>
+
+    <style name="AppTheme.Teal">
+        <item name="colorPrimary">@color/md_teal_500</item>
+        <item name="colorPrimaryDark">@color/md_teal_700</item>
+        <item name="colorPrimaryLight">@color/md_teal_100</item>
+        <item name="colorAccent">@color/md_amber_500</item>
+        <item name="colorControlNormal">@color/md_teal_200</item>
+        <item name="colorControlActivated">@color/md_teal_400</item>
+        <item name="colorSwitchThumbNormal">@color/md_teal_300</item>
+        <item name="colorWindowBackground">@color/md_teal_50</item>
     </style>
 
     <style name="AppTheme.Green">
         <item name="colorPrimary">@color/md_green_500</item>
         <item name="colorPrimaryDark">@color/md_green_700</item>
         <item name="colorPrimaryLight">@color/md_green_100</item>
-        <item name="colorAccent">@color/md_amber_500</item>
+        <item name="colorAccent">@color/md_amber_700</item>
         <item name="colorControlNormal">@color/md_green_200</item>
         <item name="colorControlActivated">@color/md_green_400</item>
         <item name="colorSwitchThumbNormal">@color/md_green_300</item>
         <item name="colorWindowBackground">@color/md_green_50</item>
+    </style>
+
+    <style name="AppTheme.Light_Green">
+        <item name="colorPrimary">@color/md_light_green_500</item>
+        <item name="colorPrimaryDark">@color/md_light_green_700</item>
+        <item name="colorPrimaryLight">@color/md_light_green_100</item>
+        <item name="colorAccent">@color/md_amber_500</item>
+        <item name="colorControlNormal">@color/md_light_green_200</item>
+        <item name="colorControlActivated">@color/md_light_green_400</item>
+        <item name="colorSwitchThumbNormal">@color/md_light_green_300</item>
+        <item name="colorWindowBackground">@color/md_light_green_50</item>
+    </style>
+
+    <style name="AppTheme.Lime">
+        <item name="colorPrimary">@color/md_lime_500</item>
+        <item name="colorPrimaryDark">@color/md_lime_700</item>
+        <item name="colorPrimaryLight">@color/md_lime_100</item>
+        <item name="colorAccent">@color/md_amber_500</item>
+        <item name="colorControlNormal">@color/md_lime_200</item>
+        <item name="colorControlActivated">@color/md_lime_400</item>
+        <item name="colorSwitchThumbNormal">@color/md_lime_300</item>
+        <item name="colorWindowBackground">@color/md_lime_50</item>
+    </style>
+
+    <style name="AppTheme.Yellow">
+        <item name="colorPrimary">@color/md_yellow_500</item>
+        <item name="colorPrimaryDark">@color/md_yellow_700</item>
+        <item name="colorPrimaryLight">@color/md_yellow_100</item>
+        <item name="colorAccent">@color/md_blue_500</item>
+        <item name="colorControlNormal">@color/md_yellow_200</item>
+        <item name="colorControlActivated">@color/md_yellow_400</item>
+        <item name="colorSwitchThumbNormal">@color/md_yellow_300</item>
+        <item name="colorWindowBackground">@color/md_yellow_50</item>
+    </style>
+
+    <style name="AppTheme.Amber">
+        <item name="colorPrimary">@color/md_amber_500</item>
+        <item name="colorPrimaryDark">@color/md_amber_700</item>
+        <item name="colorPrimaryLight">@color/md_amber_100</item>
+        <item name="colorAccent">@color/md_indigo_500</item>
+        <item name="colorControlNormal">@color/md_amber_200</item>
+        <item name="colorControlActivated">@color/md_amber_400</item>
+        <item name="colorSwitchThumbNormal">@color/md_amber_300</item>
+        <item name="colorWindowBackground">@color/md_amber_50</item>
+    </style>
+
+    <style name="AppTheme.Orange">
+        <item name="colorPrimary">@color/md_orange_500</item>
+        <item name="colorPrimaryDark">@color/md_orange_700</item>
+        <item name="colorPrimaryLight">@color/md_orange_100</item>
+        <item name="colorAccent">@color/md_indigo_500</item>
+        <item name="colorControlNormal">@color/md_orange_200</item>
+        <item name="colorControlActivated">@color/md_orange_400</item>
+        <item name="colorSwitchThumbNormal">@color/md_orange_300</item>
+        <item name="colorWindowBackground">@color/md_orange_50</item>
+    </style>
+
+    <style name="AppTheme.Deep_Orange">
+        <item name="colorPrimary">@color/md_deep_orange_500</item>
+        <item name="colorPrimaryDark">@color/md_deep_orange_700</item>
+        <item name="colorPrimaryLight">@color/md_deep_orange_100</item>
+        <item name="colorAccent">@color/md_indigo_500</item>
+        <item name="colorControlNormal">@color/md_deep_orange_200</item>
+        <item name="colorControlActivated">@color/md_deep_orange_400</item>
+        <item name="colorSwitchThumbNormal">@color/md_deep_orange_300</item>
+        <item name="colorWindowBackground">@color/md_deep_orange_50</item>
+    </style>
+
+    <style name="AppTheme.Brown">
+        <item name="colorPrimary">@color/md_brown_500</item>
+        <item name="colorPrimaryDark">@color/md_brown_700</item>
+        <item name="colorPrimaryLight">@color/md_brown_100</item>
+        <item name="colorAccent">@color/md_amber_500</item>
+        <item name="colorControlNormal">@color/md_brown_200</item>
+        <item name="colorControlActivated">@color/md_brown_400</item>
+        <item name="colorSwitchThumbNormal">@color/md_brown_300</item>
+        <item name="colorWindowBackground">@color/md_brown_50</item>
+    </style>
+
+    <style name="AppTheme.Grey">
+        <item name="colorPrimary">@color/md_grey_500</item>
+        <item name="colorPrimaryDark">@color/md_grey_700</item>
+        <item name="colorPrimaryLight">@color/md_grey_100</item>
+        <item name="colorAccent">@color/md_amber_500</item>
+        <item name="colorControlNormal">@color/md_grey_200</item>
+        <item name="colorControlActivated">@color/md_grey_400</item>
+        <item name="colorSwitchThumbNormal">@color/md_grey_300</item>
+        <item name="colorWindowBackground">@color/md_grey_50</item>
+    </style>
+
+    <style name="AppTheme.Blue_Grey">
+        <item name="colorPrimary">@color/md_blue_grey_500</item>
+        <item name="colorPrimaryDark">@color/md_blue_grey_700</item>
+        <item name="colorPrimaryLight">@color/md_blue_grey_100</item>
+        <item name="colorAccent">@color/md_amber_500</item>
+        <item name="colorControlNormal">@color/md_blue_grey_200</item>
+        <item name="colorControlActivated">@color/md_blue_grey_400</item>
+        <item name="colorSwitchThumbNormal">@color/md_blue_grey_300</item>
+        <item name="colorWindowBackground">@color/md_blue_grey_50</item>
     </style>
 
     <style name="AppTheme.NoActionBar">
