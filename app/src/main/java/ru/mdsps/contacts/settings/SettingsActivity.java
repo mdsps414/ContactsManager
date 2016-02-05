@@ -1,4 +1,4 @@
-package ru.mdsps.contacts.activity;
+package ru.mdsps.contacts.settings;
 
 import android.os.Bundle;
 import android.support.v4.content.res.ResourcesCompat;
@@ -18,10 +18,10 @@ import ru.mdsps.contacts.AppContacts;
 import ru.mdsps.contacts.R;
 import ru.mdsps.contacts.core.base.BaseActivity;
 import ru.mdsps.contacts.core.model.AccountData;
-import ru.mdsps.contacts.core.settings.OnElementClickListener;
-import ru.mdsps.contacts.core.settings.Settings;
-import ru.mdsps.contacts.core.settings.SettingsAccountsAdapter;
-import ru.mdsps.contacts.core.settings.SettingsColorGridAdapter;
+import ru.mdsps.contacts.settings.OnElementClickListener;
+import ru.mdsps.contacts.settings.Settings;
+import ru.mdsps.contacts.settings.SettingsAccountsAdapter;
+import ru.mdsps.contacts.settings.SettingsColorGridAdapter;
 import ru.mdsps.contacts.core.utility.AppUtility;
 
 public class SettingsActivity extends BaseActivity implements View.OnClickListener, OnElementClickListener {

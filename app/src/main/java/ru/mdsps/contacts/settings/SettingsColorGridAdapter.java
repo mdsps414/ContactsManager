@@ -1,4 +1,4 @@
-package ru.mdsps.contacts.core.settings;
+package ru.mdsps.contacts.settings;
 
 import android.view.View;
 import android.view.ViewGroup;

@@ -1,0 +1,56 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ru.mdsps.contacts.contacts.ContactListFragment">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/contacts_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/form_main_recycler_fragment_recycler_top_margin" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:id="@+id/progress_box">
+
+        <ImageView
+            android:layout_width="@dimen/form_main_recycler_fragment_logo_size"
+            android:layout_height="@dimen/form_main_recycler_fragment_logo_size"
+            android:id="@+id/imageView"
+            android:src="@mipmap/ic_launcher"
+            android:contentDescription="@string/app_name"
+            android:alpha="100"
+            android:layout_gravity="center_horizontal" />
+
+        <me.zhanghai.android.materialprogressbar.MaterialProgressBar
+            android:layout_width="@dimen/form_main_recycler_fragment_progressbar_size"
+            android:layout_height="@dimen/form_main_recycler_fragment_progressbar_size"
+            android:layout_gravity="center"
+            android:indeterminate="true"
+            style="@style/Widget.MaterialProgressBar.ProgressBar" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/form_main_recycler_fragment_loading"
+            android:layout_gravity="center_horizontal"
+            android:textSize="@dimen/form_main_recycler_fragment_loading_text_size" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/form_main_recycler_fragment_empty_contacts"
+        android:id="@+id/empty_text"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/form_main_recycler_fragment_empty_text_top_margin"
+        android:visibility="gone" />
+
+
+</FrameLayout>

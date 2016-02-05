@@ -31,4 +31,12 @@
     <dimen name="settings_item_account_text_size">13sp</dimen>
     <dimen name="settings_item_circle_size">48dp</dimen>
 
+    <!-- FORM MAIN (BASE_RECYCLER_FRAGMENT) -->
+    <dimen name="form_main_recycler_fragment_logo_size">72dp</dimen>
+    <dimen name="form_main_recycler_fragment_progressbar_size">24dp</dimen>
+    <dimen name="form_main_recycler_fragment_empty_text_top_margin">24dp</dimen>
+    <dimen name="form_main_recycler_fragment_loading_text_size">12sp</dimen>
+    <dimen name="form_main_recycler_fragment_recycler_top_margin">8dp</dimen>
+
+
 </resources>

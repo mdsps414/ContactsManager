@@ -12,7 +12,7 @@ public abstract class BaseObject {
     public static final int EMAIL = 3;
     public static final int GROUP = 4;
     public static final int ORGANIZATION = 5;
-    public static final int CLUSTER = 6;
+    public static final int CONTACT_LIST_ITEM = 6;
 
     public abstract String getItemPrimaryLabel();
 

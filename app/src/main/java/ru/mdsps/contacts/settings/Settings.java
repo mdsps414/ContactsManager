@@ -1,29 +1,25 @@
-package ru.mdsps.contacts.core.settings;
+package ru.mdsps.contacts.settings;
 
 import android.content.Context;
 import android.content.SharedPreferences;
 
 import java.util.ArrayList;
-import java.util.List;
-import java.util.Set;
+import java.util.Collections;
 
 import ru.mdsps.contacts.AppContacts;
 import ru.mdsps.contacts.R;
 
-/**
- * Created by Михаил on 27.01.2016.
- * Настройки приложения
- */
+
 public class Settings {
 
-    private final String SETTINGS_PREFERENCES = "mds_contacts_preg";
-    private SharedPreferences preferences;
-    private SharedPreferences.Editor editor;
+    private SharedPreferences mPreferences;
+    private SharedPreferences.Editor mEditor;
 
     public Settings(){
         Context context = AppContacts.getContext();
-        this.preferences = context.getSharedPreferences(SETTINGS_PREFERENCES, Context.MODE_PRIVATE);
-        this.editor = this.preferences.edit();
+        String SETTINGS_PREFERENCES = "mds_contacts_preg";
+        mPreferences = context.getSharedPreferences(SETTINGS_PREFERENCES, Context.MODE_PRIVATE);
+        this.mEditor = this.mPreferences.edit();
     }
 
     // BASE SETTINGS
@@ -31,21 +27,19 @@ public class Settings {
     private final String SHOW_ACCOUNTS = "SHOW_ACCOUNTS";
 
     public int getAppTheme(){
-        return preferences.getInt(THEME, R.style.AppTheme_Standard);
+        return mPreferences.getInt(THEME, R.style.AppTheme_Standard);
     }
 
     public void setAppTheme(int theme){
-        editor.putInt(THEME, theme).apply();
+        mEditor.putInt(THEME, theme).apply();
     }
 
     public ArrayList<String> getShowAccounts(){
-        String sha = preferences.getString(SHOW_ACCOUNTS, null);
+        String mShowAcc = mPreferences.getString(SHOW_ACCOUNTS, null);
         ArrayList<String> p = new ArrayList<>();
-        if(sha != null && sha != "" && !sha.isEmpty()){
-            String[] shaa = sha.split("~");
-            for(String it : shaa){
-                p.add(it);
-            }
+        if(mShowAcc != null && !mShowAcc.equals("") && !mShowAcc.isEmpty()){
+            String[] mShowAccounts = mShowAcc.split("~");
+            Collections.addAll(p, mShowAccounts);
             return p;
         }
         return null;
@@ -59,7 +53,7 @@ public class Settings {
                 sb.append("~");
             }
         }
-        editor.putString(SHOW_ACCOUNTS, sb.toString()).apply();
+        mEditor.putString(SHOW_ACCOUNTS, sb.toString()).apply();
     }
 
 
@@ -67,24 +61,24 @@ public class Settings {
     // CONTACT SETTINGS
     private final String NAME_ALT = "NAME_ALTERNATIVE";
     public int getNameAlt(){
-        return preferences.getInt(NAME_ALT,0);
+        return mPreferences.getInt(NAME_ALT,0);
     }
     public void setNameAlt(int val){
-        editor.putInt(NAME_ALT, val).apply();
+        mEditor.putInt(NAME_ALT, val).apply();
     }
 
     private final String CONTACT_ITEM_TYPE = "CONTACT_ITEM_TYPE";
     public int getItemType(){
-        return preferences.getInt(CONTACT_ITEM_TYPE,0);
+        return mPreferences.getInt(CONTACT_ITEM_TYPE,0);
     }
     public void setItemType(int val){
-        editor.putInt(CONTACT_ITEM_TYPE, val).apply();
+        mEditor.putInt(CONTACT_ITEM_TYPE, val).apply();
     }
 
     private final String SHOW_CALL_BUTTON = "SHOW_CALL_BUTTON";
-    public boolean showCallButton(){ return preferences.getBoolean(SHOW_CALL_BUTTON, false); }
+    public boolean showCallButton(){ return mPreferences.getBoolean(SHOW_CALL_BUTTON, false); }
     public void setShowCallButton(boolean val){
-        editor.putBoolean(SHOW_CALL_BUTTON, val).apply();
+        mEditor.putBoolean(SHOW_CALL_BUTTON, val).apply();
     }
 
 

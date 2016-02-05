@@ -3,7 +3,7 @@ package ru.mdsps.contacts.core.base;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
-import ru.mdsps.contacts.core.settings.Settings;
+import ru.mdsps.contacts.settings.Settings;
 import ru.mdsps.contacts.core.utility.AppUtility;
 
 
