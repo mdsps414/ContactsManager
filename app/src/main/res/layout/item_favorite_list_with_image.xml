@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.andexert.library.RippleView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:rv_color="@color/md_teal_300"
+    app:rv_type="rectangle"
+    android:layout_alignParentTop="true"
+    android:layout_alignParentLeft="true"
+    android:layout_toLeftOf="@+id/view"
+    android:layout_toStartOf="@+id/view">
+
+    <FrameLayout
+        android:id="@+id/favorite_item"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/fm_item_favorite_box_padding">
+
+        <ImageView
+            android:id="@+id/favorite_item_image"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/fm_item_favorite_box_height"
+            android:contentDescription="@string/app_name"
+            android:src="@mipmap/contact_default"
+            android:scaleType="centerCrop" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/fm_item_favorite_text_box_height"
+            android:padding="@dimen/fm_item_favorite_text_box_padding"
+            android:layout_gravity="bottom">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLargeInverse"
+                android:text="Large Text"
+                android:textSize="@dimen/fm_item_favorite_text_box_name_font_size"
+                android:id="@+id/favorite_item_name" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmallInverse"
+                android:text="Small Text"
+                android:textSize="@dimen/fm_item_favorite_text_box_desc_font_size"
+                android:id="@+id/favorite_item_desc" />
+        </LinearLayout>
+
+    </FrameLayout>
+</com.andexert.library.RippleView>

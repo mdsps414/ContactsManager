@@ -9,12 +9,15 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.squareup.picasso.Picasso;
+
 import java.util.ArrayList;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 import ru.mdsps.contacts.R;
 import ru.mdsps.contacts.core.base.BaseObject;
 import ru.mdsps.contacts.core.model.ContactListItem;
+import ru.mdsps.contacts.core.utility.FileUtility;
 import ru.mdsps.contacts.core.views.CircleTextView;
 import ru.mdsps.contacts.settings.Settings;
 
@@ -114,6 +117,7 @@ public class ContactsListRecyclerAdapter extends RecyclerView.Adapter<RecyclerVi
                         } else {
                             h1.mCallButton.setVisibility(View.INVISIBLE);
                         }
+
                 }
                 break;
             case 1: // Есть картинка
@@ -124,6 +128,20 @@ public class ContactsListRecyclerAdapter extends RecyclerView.Adapter<RecyclerVi
                         h0.mTextName.setText(selName(mRecord));
                         h0.mTextDesc.setText(mRecord.getMobileNumber());
                         //TODO: Добавление картинки
+                        if(FileUtility.checkFile(String.valueOf(mRecord.getCID()))){
+                            Picasso.with(h0.mPhoto.getContext())
+                                    .load(FileUtility.getFile(String.valueOf(mRecord.getCID())))
+                                    .placeholder(R.mipmap.contact_default)
+                                    .error(R.mipmap.contact_default)
+                                    .into(h0.mPhoto);
+
+                        } else if(mRecord.getPhotoUri() != null){
+                            Picasso.with(h0.mPhoto.getContext())
+                                    .load(mRecord.getPhotoUri())
+                                    .placeholder(R.mipmap.contact_default)
+                                    .error(R.mipmap.contact_default)
+                                    .into(h0.mPhoto);
+                        }
                         break;
                     case 1: // Не алфавитный
                         ImageViewHolder h1 = (ImageViewHolder) holder;

@@ -44,7 +44,6 @@
     <dimen name="fm_item_contact_alphabet_left_margin">72dp</dimen>
     <dimen name="fm_item_contact_alphabet_right_margin">16dp</dimen>
 
-
     <dimen name="form_main_item_contact_height">56dp</dimen>
     <dimen name="form_main_item_contact_left_frame_box_width">56dp</dimen>
     <dimen name="form_main_item_contact_left_frame_box_padding">16dp</dimen>
@@ -58,6 +57,15 @@
     <dimen name="form_main_item_contact_text_box_horizontal_margin">16dp</dimen>
     <dimen name="form_main_item_contact_name_text_size">16sp</dimen>
     <dimen name="form_main_item_contact_desc_text_size">14sp</dimen>
+
+    <!-- FORM MAIN (ITEM FAVORITE) -->
+    <dimen name="fm_item_favorite_box_padding">2dp</dimen>
+    <dimen name="fm_item_favorite_box_height">150dp</dimen>
+    <dimen name="fm_item_favorite_text_box_height">68dp</dimen>
+    <dimen name="fm_item_favorite_text_box_padding">16dp</dimen>
+    <dimen name="fm_item_favorite_text_box_name_font_size">16sp</dimen>
+    <dimen name="fm_item_favorite_text_box_desc_font_size">12sp</dimen>
+
 
 
 

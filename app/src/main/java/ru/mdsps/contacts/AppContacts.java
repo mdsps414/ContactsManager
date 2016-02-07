@@ -7,11 +7,13 @@ import android.app.Application;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.database.Cursor;
+import android.os.Environment;
 import android.provider.ContactsContract.Groups;
 
 import com.bettervectordrawable.Convention;
 import com.bettervectordrawable.VectorDrawableCompat;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -23,6 +25,8 @@ import ru.mdsps.contacts.core.model.Group;
  * Главный файл приложения. Запускается первым и содержит кучу переменных
  */
 public class AppContacts extends Application {
+
+    public static String SDCARD_PHOTO_PATH = null;
 
     // LOADER CODE
     public static final int CNN_CONTACTS_LIST_LOADER = 0;
@@ -49,6 +53,8 @@ public class AppContacts extends Application {
         super.onCreate();
 
         AppContacts.context = getApplicationContext();
+
+        readPhotoPath();
 
         //Подключение svg
         int[] ids = VectorDrawableCompat.findVectorResourceIdsByConvention(getResources(),
@@ -92,6 +98,23 @@ public class AppContacts extends Application {
             mGroupList.put(gId, grp);
         }
         group.close();
+    }
+
+    private void readPhotoPath(){
+        String mContactPathName = "Android/data/" + getPackageName() +"/files/photo";
+        String sdState = android.os.Environment.getExternalStorageState();
+        File fileName = null;
+        if(sdState.equals(android.os.Environment.MEDIA_MOUNTED)){
+            File sdDir = android.os.Environment.getExternalStorageDirectory();
+            fileName = new File(sdDir, mContactPathName);
+        }
+
+        if (!fileName.exists()) {
+            fileName.mkdirs();
+            SDCARD_PHOTO_PATH = fileName.getPath();
+        } else {
+            SDCARD_PHOTO_PATH = fileName.getPath();
+        }
     }
 
 }
