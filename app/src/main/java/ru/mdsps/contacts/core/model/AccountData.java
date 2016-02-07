@@ -51,7 +51,7 @@ public class AccountData {
                 //mIcon = context.getResources().getDrawable(android.R.drawable.sym_def_app_icon);
                 mIcon = ContextCompat.getDrawable(context, android.R.drawable.sym_def_app_icon);
             }
-            mNameType = mName + "^" + mType;
+            mNameType = mName + "@" + mType;
         }
     }
 
@@ -60,7 +60,7 @@ public class AccountData {
         mType = type;
         mTypeLabel = label;
         mIcon = icon;
-        mNameType = mName + "^" + mType;
+        mNameType = mName + "@" + mType;
     }
 
     public String getName() {

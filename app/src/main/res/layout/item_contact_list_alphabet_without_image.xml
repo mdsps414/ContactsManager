@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.andexert.library.RippleView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:rv_color="@color/md_teal_300"
+    app:rv_type="rectangle"
+    android:layout_alignParentTop="true"
+    android:layout_alignParentLeft="true"
+    android:layout_toLeftOf="@+id/view"
+    android:layout_toStartOf="@+id/view">
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/form_main_item_contact_height"
+        android:id="@+id/contact_item">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/frameLayout2"
+            android:layout_toStartOf="@+id/frameLayout2">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/fm_item_contact_alphabet_left_margin"
+                android:layout_marginRight="@dimen/fm_item_contact_alphabet_right_margin">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Large Text"
+                    android:textSize="@dimen/form_main_item_contact_name_text_size"
+                    android:id="@+id/item_name_label"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:maxLines="1"
+                    android:singleLine="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Small Text"
+                    android:textSize="@dimen/form_main_item_contact_desc_text_size"
+                    android:id="@+id/item_desc_label"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:maxLines="1"
+                    android:singleLine="true" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="@dimen/form_main_item_contact_right_frame_box_width"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:id="@+id/frameLayout2" >
+
+            <ru.mdsps.contacts.core.views.CircleTextView
+                android:id="@+id/item_image_circle"
+                android:layout_width="@dimen/form_main_item_contact_right_frame_box_icon_size"
+                android:layout_height="@dimen/form_main_item_contact_right_frame_box_icon_size"
+                android:layout_gravity="center_vertical|left"
+                app:border_size="1dp"
+                app:border_color="@color/md_grey_400"
+                app:background_color="@color/md_red_600"
+                app:text="A"
+                app:text_size="@dimen/mds_font_size_large"
+                app:text_color="@color/md_white_1000" />
+        </FrameLayout>
+    </RelativeLayout>
+</com.andexert.library.RippleView>

@@ -57,4 +57,16 @@ public abstract class BaseRecyclerFragment extends Fragment {
         }
 
     }
+
+    public void addOnScrollListener(RecyclerView.OnScrollListener listener){
+        mRecycler.addOnScrollListener(listener);
+    }
+
+    public void addItemDecoration(RecyclerView.ItemDecoration decor){
+        mRecycler.addItemDecoration(decor);
+    }
+
+    public RecyclerView getRecycler(){
+        return mRecycler;
+    }
 }

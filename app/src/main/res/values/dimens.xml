@@ -38,5 +38,27 @@
     <dimen name="form_main_recycler_fragment_loading_text_size">12sp</dimen>
     <dimen name="form_main_recycler_fragment_recycler_top_margin">8dp</dimen>
 
+    <!-- FORM MAIN (ITEM CONTACT) -->
+    <dimen name="fm_item_contact_header_padding_horizontal">16dp</dimen>
+
+    <dimen name="fm_item_contact_alphabet_left_margin">72dp</dimen>
+    <dimen name="fm_item_contact_alphabet_right_margin">16dp</dimen>
+
+
+    <dimen name="form_main_item_contact_height">56dp</dimen>
+    <dimen name="form_main_item_contact_left_frame_box_width">56dp</dimen>
+    <dimen name="form_main_item_contact_left_frame_box_padding">16dp</dimen>
+    <dimen name="form_main_item_contact_left_frame_box_letter_size">24sp</dimen>
+    <dimen name="form_main_item_contact_left_frame_box_right_margin">16dp</dimen>
+
+    <dimen name="form_main_item_contact_right_frame_box_width">56dp</dimen>
+    <dimen name="form_main_item_contact_right_frame_box_icon_size">40dp</dimen>
+    <dimen name="form_main_item_contact_right_frame_box_icon_size_small">24dp</dimen>
+
+    <dimen name="form_main_item_contact_text_box_horizontal_margin">16dp</dimen>
+    <dimen name="form_main_item_contact_name_text_size">16sp</dimen>
+    <dimen name="form_main_item_contact_desc_text_size">14sp</dimen>
+
+
 
 </resources>

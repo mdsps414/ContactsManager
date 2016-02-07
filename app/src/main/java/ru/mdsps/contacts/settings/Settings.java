@@ -19,7 +19,7 @@ public class Settings {
         Context context = AppContacts.getContext();
         String SETTINGS_PREFERENCES = "mds_contacts_preg";
         mPreferences = context.getSharedPreferences(SETTINGS_PREFERENCES, Context.MODE_PRIVATE);
-        this.mEditor = this.mPreferences.edit();
+        mEditor = mPreferences.edit();
     }
 
     // BASE SETTINGS
