@@ -17,6 +17,7 @@ import de.hdodenhof.circleimageview.CircleImageView;
 import ru.mdsps.contacts.R;
 import ru.mdsps.contacts.core.base.BaseObject;
 import ru.mdsps.contacts.core.model.ContactListItem;
+import ru.mdsps.contacts.core.utility.AppUtility;
 import ru.mdsps.contacts.core.utility.FileUtility;
 import ru.mdsps.contacts.core.views.CircleTextView;
 import ru.mdsps.contacts.settings.Settings;
@@ -105,6 +106,7 @@ public class ContactsListRecyclerAdapter extends RecyclerView.Adapter<RecyclerVi
                         h0.mTextName.setText(selName(mRecord));
                         h0.mTextDesc.setText(mRecord.getMobileNumber());
                         h0.mPhoto.setText(selLetter(mRecord));
+                        h0.mPhoto.setBackgroundColor(AppUtility.getRandomColor());
                         break;
                     case 1: // Не алфавитный
                         NoImageViewHolder h1 = (NoImageViewHolder) holder;
@@ -112,6 +114,7 @@ public class ContactsListRecyclerAdapter extends RecyclerView.Adapter<RecyclerVi
                         h1.mTextName.setText(selName(mRecord));
                         h1.mTextDesc.setText(mRecord.getMobileNumber());
                         h1.mPhoto.setText(selLetter(mRecord));
+                        h1.mPhoto.setBackgroundColor(AppUtility.getRandomColor());
                         if(mSettings.showCallButton()){
                             h1.mCallButton.setVisibility(View.VISIBLE);
                         } else {
@@ -127,7 +130,7 @@ public class ContactsListRecyclerAdapter extends RecyclerView.Adapter<RecyclerVi
                         h0.setRecord(mRecord);
                         h0.mTextName.setText(selName(mRecord));
                         h0.mTextDesc.setText(mRecord.getMobileNumber());
-                        //TODO: Добавление картинки
+                        // Добавление картинки
                         if(FileUtility.checkFile(String.valueOf(mRecord.getCID()))){
                             Picasso.with(h0.mPhoto.getContext())
                                     .load(FileUtility.getFile(String.valueOf(mRecord.getCID())))
@@ -148,12 +151,28 @@ public class ContactsListRecyclerAdapter extends RecyclerView.Adapter<RecyclerVi
                         h1.setRecord(mRecord);
                         h1.mTextName.setText(selName(mRecord));
                         h1.mTextDesc.setText(mRecord.getMobileNumber());
-                        //TODO: Добавление картинки
+                        // Добавление картинки
                         if(mSettings.showCallButton()){
                             h1.mCallButton.setVisibility(View.VISIBLE);
                         } else {
                             h1.mCallButton.setVisibility(View.INVISIBLE);
                         }
+                        // Добавление картинки
+                        if(FileUtility.checkFile(String.valueOf(mRecord.getCID()))){
+                            Picasso.with(h1.mPhoto.getContext())
+                                    .load(FileUtility.getFile(String.valueOf(mRecord.getCID())))
+                                    .placeholder(R.mipmap.contact_default)
+                                    .error(R.mipmap.contact_default)
+                                    .into(h1.mPhoto);
+
+                        } else if(mRecord.getPhotoUri() != null){
+                            Picasso.with(h1.mPhoto.getContext())
+                                    .load(mRecord.getPhotoUri())
+                                    .placeholder(R.mipmap.contact_default)
+                                    .error(R.mipmap.contact_default)
+                                    .into(h1.mPhoto);
+                        }
+                        break;
                 }
                 break;
         }

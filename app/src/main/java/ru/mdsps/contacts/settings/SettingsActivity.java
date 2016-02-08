@@ -147,6 +147,9 @@ public class SettingsActivity extends BaseActivity implements View.OnClickListen
                 selShowCallButtonCheck.setChecked(!settings.showCallButton());
                 settings.setShowCallButton(selShowCallButtonCheck.isChecked());
                 break;
+            case R.id.settings_show_call_check:
+                settings.setShowCallButton(selShowCallButtonCheck.isChecked());
+                break;
 
         }
 
@@ -167,6 +170,7 @@ public class SettingsActivity extends BaseActivity implements View.OnClickListen
         selShowCallButton = (LinearLayout) findViewById(R.id.settings_show_call);
         selShowCallButton.setOnClickListener(this);
         selShowCallButtonCheck = (CheckBox) findViewById(R.id.settings_show_call_check);
+        selShowCallButtonCheck.setOnClickListener(this);
     }
 
     @Override

@@ -18,13 +18,23 @@
         android:layout_height="wrap_content"
         android:padding="@dimen/fm_item_favorite_box_padding">
 
-        <ImageView
+        <FrameLayout
             android:id="@+id/favorite_item_image"
             android:layout_width="match_parent"
             android:layout_height="@dimen/fm_item_favorite_box_height"
-            android:contentDescription="@string/app_name"
-            android:src="@mipmap/contact_default"
-            android:scaleType="centerCrop" />
+            android:background="@color/md_amber_800"
+            android:padding="@dimen/fm_item_favorite_text_box_padding">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLargeInverse"
+                android:text="A"
+                android:textSize="@dimen/abc_text_size_display_3_material"
+                android:id="@+id/favorite_item_image_letter"
+                android:layout_gravity="right|top" />
+
+        </FrameLayout>
 
         <LinearLayout
             android:orientation="vertical"

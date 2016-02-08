@@ -11,6 +11,7 @@ import android.provider.ContactsContract;
 import android.support.v4.content.ContextCompat;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 import ru.mdsps.contacts.AppContacts;
 import ru.mdsps.contacts.R;
@@ -101,25 +102,11 @@ public class AppUtility {
         throw new RuntimeException("Unable to find matching authenticator");
     }
 
-    public static ArrayList<String> getPhoneBookAccountList(){
-        ArrayList<String> res = new ArrayList<>();
+    public static int getRandomColor(){
         Context context = AppContacts.getContext();
-        Cursor cur = context.getContentResolver().query(
-                ContactsContract.RawContacts.CONTENT_URI,
-                new String[]{ContactsContract.RawContacts.ACCOUNT_NAME, ContactsContract.RawContacts.ACCOUNT_TYPE},
-                ContactsContract.RawContacts.ACCOUNT_NAME + " IS NOT NULL",
-                null,
-                ContactsContract.RawContacts.ACCOUNT_NAME + " ASC"
-        );
-        String selAccount = null;
-        while(cur.moveToNext()){
-            selAccount = cur.getString(0) + "~" + cur.getString(1);
-            if(!res.contains(selAccount)){
-                res.add(selAccount);
-            }
-        }
-        cur.close();
-        return res;
+        int[] mColorArray = context.getResources().getIntArray(R.array.settings_theme_color_array);
+        int mColorIndex = new Random().nextInt(mColorArray.length);
+        return mColorArray[mColorIndex];
     }
 
 

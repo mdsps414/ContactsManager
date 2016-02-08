@@ -64,6 +64,9 @@ public class ContactListLoader extends AsyncTaskLoader<ArrayList<BaseObject>> {
                 Contacts.PHOTO_THUMBNAIL_URI,
                 Contacts.LOOKUP_KEY
         };
+        if(mFilter != null){
+            SELECTION = mFilter;
+        }
 
         // Получаем список всех контактов из телефона
         Cursor mContactsCursor = mContentResolver.query(URI, PROJECTION, SELECTION, PARAMETER, ORDER);
@@ -123,6 +126,7 @@ public class ContactListLoader extends AsyncTaskLoader<ArrayList<BaseObject>> {
                 mRec.add(mItem);
             }
         }
+        mContactsCursor.close();
 
         // Сортируем полученный список
         Comparator<BaseObject> mComparator = new Comparator<BaseObject>() {

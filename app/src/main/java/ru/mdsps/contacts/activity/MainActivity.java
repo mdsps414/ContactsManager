@@ -19,6 +19,7 @@ import android.view.ViewGroup;
 
 import ru.mdsps.contacts.R;
 import ru.mdsps.contacts.contacts.ContactListFragment;
+import ru.mdsps.contacts.contacts.FavoriteListFragment;
 import ru.mdsps.contacts.core.base.BaseActivity;
 import ru.mdsps.contacts.settings.SettingsActivity;
 
@@ -29,7 +30,7 @@ public class MainActivity extends BaseActivity {
     private Fragment[] mFragments = new Fragment[]{
             new PlaceholderFragment(),
             new ContactListFragment(),
-            new PlaceholderFragment()
+            new FavoriteListFragment()
     };
 
     @Override
@@ -39,11 +40,9 @@ public class MainActivity extends BaseActivity {
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        // Create the adapter that will return a fragment for each of the three
-        // primary sections of the activity.
+
         mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
 
-        // Set up the ViewPager with the sections adapter.
         mViewPager = (ViewPager) findViewById(R.id.container);
         mViewPager.setAdapter(mSectionsPagerAdapter);
 
