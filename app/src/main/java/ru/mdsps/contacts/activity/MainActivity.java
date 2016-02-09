@@ -18,6 +18,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import ru.mdsps.contacts.R;
+import ru.mdsps.contacts.contacts.CategoryListFragment;
 import ru.mdsps.contacts.contacts.ContactListFragment;
 import ru.mdsps.contacts.contacts.FavoriteListFragment;
 import ru.mdsps.contacts.core.base.BaseActivity;
@@ -28,7 +29,7 @@ public class MainActivity extends BaseActivity {
     private SectionsPagerAdapter mSectionsPagerAdapter;
     private ViewPager mViewPager;
     private Fragment[] mFragments = new Fragment[]{
-            new PlaceholderFragment(),
+            new CategoryListFragment(),
             new ContactListFragment(),
             new FavoriteListFragment()
     };
@@ -81,31 +82,6 @@ public class MainActivity extends BaseActivity {
         return super.onOptionsItemSelected(item);
     }
 
-
-    public static class PlaceholderFragment extends Fragment {
-
-        private static final String ARG_SECTION_NUMBER = "section_number";
-
-        public PlaceholderFragment() {
-        }
-
-        public static PlaceholderFragment newInstance(int sectionNumber) {
-            PlaceholderFragment fragment = new PlaceholderFragment();
-            Bundle args = new Bundle();
-            args.putInt(ARG_SECTION_NUMBER, sectionNumber);
-            fragment.setArguments(args);
-            return fragment;
-        }
-
-        @Override
-        public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                                 Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.fragment_contact_list, container, false);
-            return rootView;
-        }
-    }
-
-
     public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
         public SectionsPagerAdapter(FragmentManager fm) {
@@ -114,12 +90,25 @@ public class MainActivity extends BaseActivity {
 
         @Override
         public Fragment getItem(int position) {
-            return mFragments[position];
+            Fragment mFragment = mFragments[position];
+            if(mFragment instanceof ContactListFragment){
+                ContactListFragment mFr = (ContactListFragment) mFragment;
+                mFr.showFastScroller(true);
+                mFr.setEmptyText(R.string.form_main_recycler_fragment_empty_contacts);
+            } else if(mFragment instanceof FavoriteListFragment){
+                FavoriteListFragment mFr = (FavoriteListFragment) mFragment;
+                mFr.showFastScroller(false);
+                mFr.setEmptyText(R.string.form_main_recycler_fragment_empty_favorites);
+            } else {
+                CategoryListFragment mFr = (CategoryListFragment) mFragment;
+                mFr.showFastScroller(false);
+                mFr.setEmptyText(R.string.form_main_recycler_fragment_empty_categories);
+            }
+            return mFragment;
         }
 
         @Override
         public int getCount() {
-            // Show 3 total pages.
             return 3;
         }
 

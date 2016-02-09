@@ -1,5 +1,6 @@
 package ru.mdsps.contacts.contacts;
 
+import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,6 +10,7 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import ru.mdsps.contacts.core.views.fastscroller.FastScrollRecyclerView;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -22,7 +24,8 @@ import ru.mdsps.contacts.core.utility.FileUtility;
 import ru.mdsps.contacts.core.views.CircleTextView;
 import ru.mdsps.contacts.settings.Settings;
 
-public class ContactsListRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>{
+public class ContactsListRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
+        implements FastScrollRecyclerView.SectionedAdapter{
 
     ArrayList<BaseObject> mRecords;
     Settings mSettings;
@@ -182,6 +185,14 @@ public class ContactsListRecyclerAdapter extends RecyclerView.Adapter<RecyclerVi
     public int getItemCount() {
         return mRecords.size();
     }
+
+    @NonNull
+    @Override
+    public String getSectionName(int position) {
+        ContactListItem mRecord = (ContactListItem) mRecords.get(position);
+        return selLetter(mRecord);
+    }
+
 
     class AlphabetImageViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
 

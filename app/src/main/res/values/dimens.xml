@@ -66,6 +66,14 @@
     <dimen name="fm_item_favorite_text_box_name_font_size">16sp</dimen>
     <dimen name="fm_item_favorite_text_box_desc_font_size">12sp</dimen>
 
+    <!-- FAST SCROLLER -->
+    <dimen name="fastscroll_popup_size">72dp</dimen>
+    <dimen name="fastscroll_popup_text_size">48dp</dimen>
+    <dimen name="fastscroll_thumb_min_width">0dp</dimen>
+    <dimen name="fastscroll_thumb_max_width">9dp</dimen>
+    <dimen name="fastscroll_thumb_height">72dp</dimen>
+    <dimen name="fastscroll_thumb_touch_inset">-24dp</dimen>
+
 
 
 

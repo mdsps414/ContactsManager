@@ -18,4 +18,15 @@
         <attr name="border_size" format="dimension"/>
     </declare-styleable>
 
+    <declare-styleable name="FastScrollRecyclerView">
+        <attr name="fastScrollAlwaysEnabled" format="boolean"/>
+        <attr name="fastScrollThumbCurvatureEnabled" format="boolean"/>
+        <attr name="fastScrollThumbActiveColor" format="reference|color"/>
+        <attr name="fastScrollThumbInactiveColor" format="reference|color"/>
+        <attr name="fastScrollTrackColor" format="reference|color"/>
+        <attr name="fastScrollPopupBackgroundColor" format="reference|color"/>
+        <attr name="fastScrollPopupTextColor" format="reference|color"/>
+        <attr name="fastScrollHideDelay" format="integer"/>
+    </declare-styleable>
+
 </resources>

@@ -4,11 +4,10 @@
     android:layout_height="match_parent"
     tools:context="ru.mdsps.contacts.contacts.ContactListFragment">
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/contacts_recycler"
+    <ViewStub
+        android:id="@+id/stub_recyclerview"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="@dimen/form_main_recycler_fragment_recycler_top_margin" />
+        android:layout_height="match_parent" />
 
     <LinearLayout
         android:layout_width="wrap_content"

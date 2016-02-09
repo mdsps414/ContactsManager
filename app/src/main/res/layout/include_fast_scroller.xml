@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ru.mdsps.contacts.core.views.fastscroller.FastScrollRecyclerView
+    android:id="@+id/contacts_fastscroller"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:fastScrollHideDelay="600"
+    app:fastScrollAlwaysEnabled="false"
+    app:fastScrollPopupBackgroundColor="?attr/colorAccent"
+    app:fastScrollPopupTextColor="@android:color/white"
+    app:fastScrollThumbActiveColor="?attr/colorAccent"
+    app:fastScrollThumbInactiveColor="?attr/colorAccent" />

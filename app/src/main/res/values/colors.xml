@@ -16,6 +16,10 @@
     <color name="contacts_letter_header_background">@color/md_blue_700</color>
     <color name="contacts_letter_header_text">@color/md_grey_200</color>
 
+    <!-- FAST SCROLLER COLORS -->
+    <color name="fastscroll_thumb_inactive_color">#009688</color>
+    <color name="fastscroll_thumb_active_color">#009688</color>
+
     <!-- FAB COLORS -->
     <color name="fab_backgroundTint_green">@color/md_green_800</color>
     <color name="fab_rippleColor_green">@color/md_green_400</color>
