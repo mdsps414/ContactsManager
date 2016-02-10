@@ -13,9 +13,8 @@ import android.view.ViewStub;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import ru.mdsps.contacts.core.views.fastscroller.FastScrollRecyclerView;
-
 import ru.mdsps.contacts.R;
+import ru.mdsps.contacts.core.views.fastscroller.RecyclerViewFastScroller;
 
 public abstract class BaseRecyclerFragment extends Fragment {
 
@@ -25,7 +24,7 @@ public abstract class BaseRecyclerFragment extends Fragment {
     private TextView mEmpty;
     private int mEmptyText;
     private RecyclerView mRecycler;
-    private FastScrollRecyclerView mFastScroller;
+    public RecyclerViewFastScroller mFastScroller;
     private boolean mShowFastScroller;
 
 
@@ -42,7 +41,8 @@ public abstract class BaseRecyclerFragment extends Fragment {
         if(mShowFastScroller){
             mStub.setLayoutResource(R.layout.include_fast_scroller);
             mStub.inflate();
-            mFastScroller = (FastScrollRecyclerView) mRootView.findViewById(R.id.contacts_fastscroller);
+            mRecycler = (RecyclerView) mRootView.findViewById(R.id.contacts_recycler);
+            mFastScroller = (RecyclerViewFastScroller) mRootView.findViewById(R.id.contacts_fastscroller);
         } else {
             mStub.setLayoutResource(R.layout.include_recycler_view);
             mStub.inflate();
@@ -67,9 +67,15 @@ public abstract class BaseRecyclerFragment extends Fragment {
                 mRecycler.setItemAnimator(itemAnimator);
                 mRecycler.setAdapter(adapter);
             } else {
-                mFastScroller.setAdapter(adapter);
-                mFastScroller.setLayoutManager(layoutManager);
-                mFastScroller.setItemAnimator(itemAnimator);
+                mRecycler.setLayoutManager(layoutManager);
+                mRecycler.setItemAnimator(itemAnimator);
+                mRecycler.setAdapter(adapter);
+                mFastScroller.setRecyclerView(mRecycler);
+                mFastScroller.setViewsToUse(
+                        R.layout.fast_scroller_bubble,
+                        R.id.fastscroller_bubble,
+                        R.id.fastscroller_handle
+                );
             }
             mStub.setVisibility(View.VISIBLE);
             mLoading.setVisibility(View.GONE);
@@ -83,26 +89,14 @@ public abstract class BaseRecyclerFragment extends Fragment {
     }
 
     public void addOnScrollListener(RecyclerView.OnScrollListener listener){
-        if(!mShowFastScroller) {
-            mRecycler.addOnScrollListener(listener);
-        } else {
-            mFastScroller.addOnScrollListener(listener);
-        }
+        mRecycler.addOnScrollListener(listener);
     }
 
     public void addItemDecoration(RecyclerView.ItemDecoration decor){
-        if(!mShowFastScroller) {
-            mRecycler.addItemDecoration(decor);
-        } else {
-            mFastScroller.addItemDecoration(decor);
-        }
+        mRecycler.addItemDecoration(decor);
     }
 
     public RecyclerView getRecycler(){
-        if(!mShowFastScroller) {
-            return mRecycler;
-        } else {
-            return mFastScroller;
-        }
+        return mRecycler;
     }
 }

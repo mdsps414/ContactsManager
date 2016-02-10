@@ -10,7 +10,6 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import ru.mdsps.contacts.core.views.fastscroller.FastScrollRecyclerView;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -22,10 +21,11 @@ import ru.mdsps.contacts.core.model.ContactListItem;
 import ru.mdsps.contacts.core.utility.AppUtility;
 import ru.mdsps.contacts.core.utility.FileUtility;
 import ru.mdsps.contacts.core.views.CircleTextView;
+import ru.mdsps.contacts.core.views.fastscroller.RecyclerViewFastScroller;
 import ru.mdsps.contacts.settings.Settings;
 
 public class ContactsListRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
-        implements FastScrollRecyclerView.SectionedAdapter{
+        implements RecyclerViewFastScroller.BubbleTextGetter {
 
     ArrayList<BaseObject> mRecords;
     Settings mSettings;
@@ -186,10 +186,10 @@ public class ContactsListRecyclerAdapter extends RecyclerView.Adapter<RecyclerVi
         return mRecords.size();
     }
 
-    @NonNull
+
     @Override
-    public String getSectionName(int position) {
-        ContactListItem mRecord = (ContactListItem) mRecords.get(position);
+    public String getTextToShowInBubble(int pos) {
+        ContactListItem mRecord = (ContactListItem) mRecords.get(pos);
         return selLetter(mRecord);
     }
 
