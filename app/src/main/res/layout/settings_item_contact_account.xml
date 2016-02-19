@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.andexert.library.RippleView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/settings_item_account_height"
+    app:rv_color="@color/md_teal_300"
+    app:rv_type="rectangle">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/settings_item_account_height"
+        android:id="@+id/acc_item">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@+id/frameLayout"
+            android:layout_toStartOf="@+id/frameLayout">
+
+            <FrameLayout
+                android:layout_width="@dimen/settings_item_account_check_frame_width"
+                android:layout_height="match_parent">
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/acc_item_check"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/settings_item_account_check_box_left_margin" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLargeInverse"
+                    android:text="Large Text"
+                    android:id="@+id/acc_item_name"
+                    android:textSize="@dimen/settings_item_account_text_size" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Small Text"
+                    android:id="@+id/acc_item_desc"
+                    android:textSize="@dimen/settings_item_account_text_size" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="@dimen/settings_item_account_icon_box_width"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:id="@+id/frameLayout">
+
+            <ImageView
+                android:layout_width="@dimen/settings_item_account_icon_size"
+                android:layout_height="@dimen/settings_item_account_icon_size"
+                android:id="@+id/acc_item_icon"
+                android:layout_gravity="center"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/vector_ic_call_grey" />
+        </FrameLayout>
+    </RelativeLayout>
+</com.andexert.library.RippleView>

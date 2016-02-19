@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/fmd_item_all_height"
+    android:orientation="horizontal" >
+
+    <com.andexert.library.RippleView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        app:rv_color="@color/md_teal_300"
+        app:rv_type="rectangle" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:id="@+id/item_icon_box"
+                android:layout_width="@dimen/fmd_item_icon_size"
+                android:layout_height="@dimen/fmd_item_icon_size"
+                android:layout_marginLeft="@dimen/fmd_item_icon_margin_horizontal"
+                android:layout_marginRight="@dimen/fmd_item_icon_margin_horizontal"
+                android:layout_gravity="center_vertical">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/item_icon_image"
+                    android:layout_width="@dimen/fmd_item_icon_size"
+                    android:layout_height="@dimen/fmd_item_icon_size"
+                    android:src="@mipmap/contact_default"
+                    android:layout_gravity="center"
+                    app:civ_border_width="1dp"
+                    app:civ_border_color="@color/md_cyan_500"/>
+
+                <TextView
+                    android:id="@+id/item_icon_letter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="L"
+                    android:singleLine="false"
+                    android:textColor="@color/md_white_1000"
+                    android:textSize="@dimen/fmd_item_icon_text_size" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Large Text"
+                    android:textSize="@dimen/fmd_item_name_text_size"
+                    android:id="@+id/item_name"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:maxLines="1"
+                    android:singleLine="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Small Text"
+                    android:textSize="@dimen/fmd_item_name_desc_size"
+                    android:id="@+id/item_desc"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:maxLines="1"
+                    android:singleLine="true" />
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+    </com.andexert.library.RippleView>
+
+    <com.andexert.library.RippleView
+        android:layout_width="@dimen/fmd_item_button_box_size"
+        android:layout_height="@dimen/fmd_item_button_box_size"
+        app:rv_color="@color/md_teal_300"
+        app:rv_type="rectangle" >
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/item_button">
+
+            <ImageView
+                android:layout_width="@dimen/fmd_item_button_box_icon_size"
+                android:layout_height="@dimen/fmd_item_button_box_icon_size"
+                android:src="@drawable/vector_ic_call_grey"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/fmd_item_button_box_icon_horizontal_margin"
+                android:layout_marginRight="@dimen/fmd_item_button_box_icon_horizontal_margin" />
+        </FrameLayout>
+
+    </com.andexert.library.RippleView>
+
+</LinearLayout>

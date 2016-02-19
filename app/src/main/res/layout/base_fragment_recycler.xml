@@ -1,0 +1,51 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ru.mdsps.contacts.core.base.BaseRecyclerFragment">
+
+    <ViewStub
+        android:id="@+id/recycler_stub"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:id="@+id/empty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/fmd_all_empty_top_margin"
+        android:text="@string/fms_all_empty_contacts"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:id="@+id/progress_box"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <ImageView
+            android:layout_width="@dimen/fmd_all_loading_splash_image_size"
+            android:layout_height="@dimen/fmd_all_loading_splash_image_size"
+            android:src="@mipmap/contacts_splash"
+            android:contentDescription="@string/app_name"
+            android:layout_gravity="center_horizontal" />
+
+        <me.zhanghai.android.materialprogressbar.MaterialProgressBar
+            android:layout_width="@dimen/fmd_all_loading_progressbar_size"
+            android:layout_height="@dimen/fmd_all_loading_progressbar_size"
+            android:indeterminate="true"
+            style="@style/Widget.MaterialProgressBar.ProgressBar.Horizontal"
+            android:layout_gravity="center_horizontal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/fms_all_loading"
+            android:layout_gravity="center_horizontal"
+            android:textSize="@dimen/fmd_all_loading_text_size" />
+    </LinearLayout>
+
+</FrameLayout>
