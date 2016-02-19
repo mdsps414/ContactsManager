@@ -1,5 +1,7 @@
 package ru.mdsps.contacts.core.model;
 
+import android.graphics.Bitmap;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -7,24 +9,26 @@ import ru.mdsps.contacts.core.base.BaseObject;
 
 public class Group extends BaseObject {
 
-    private int groupId;
-    private String title;
+    private int mGroupId;
+    private String mTitle;
+    private Bitmap mImage;
 
     public Group(){
         setObjectType(GROUP);
     }
 
     public Group(int groupId, String title) {
-        this.groupId = groupId;
-        this.title = title;
+        this.mGroupId = groupId;
+        this.mTitle = title;
+        this.mImage = null;
         setObjectType(GROUP);
     }
 
     public Group(String data){
         try {
             JSONObject res = new JSONObject(data);
-            setGroupId(res.getInt("groupId"));
-            setTitle(res.getString("title"));
+            setGroupId(res.getInt("mGroupId"));
+            setTitle(res.getString("mTitle"));
             setObjectType(GROUP);
         } catch (JSONException e) {
             e.printStackTrace();
@@ -32,19 +36,27 @@ public class Group extends BaseObject {
     }
 
     public int getGroupId() {
-        return groupId;
+        return mGroupId;
     }
 
     public String getTitle() {
-        return title;
+        return mTitle;
     }
 
     public void setGroupId(int groupId) {
-        this.groupId = groupId;
+        this.mGroupId = groupId;
     }
 
     public void setTitle(String title) {
-        this.title = title;
+        this.mTitle = title;
+    }
+
+    public Bitmap getImage() {
+        return mImage;
+    }
+
+    public void setImage(Bitmap mImage) {
+        this.mImage = mImage;
     }
 
     @Override
@@ -62,8 +74,9 @@ public class Group extends BaseObject {
     public JSONObject toJSONObject() {
         JSONObject res = new JSONObject();
         try {
-            res.put("groupId", getGroupId());
-            res.put("title", getTitle());
+            res.put("mGroupId", getGroupId());
+            res.put("mTitle", getTitle());
+            res.put("mImage", getImage().toString());
         } catch (JSONException e) {
             e.printStackTrace();
         }

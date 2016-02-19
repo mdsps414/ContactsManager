@@ -1,2 +1,0 @@
-# ContactsManager
-My Contacts manager

@@ -3,8 +3,52 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
-    <dimen name="appbar_padding_top">0dp</dimen>
-    <dimen name="mds_font_size_large">14sp</dimen>
+    <dimen name="appbar_padding_top">8dp</dimen>
+	
+	<!-- FORM MAIN (FAST SCROLLER) RESOURCE -->
+	<dimen name="fastscroll_popup_size">72dp</dimen>
+	<dimen name="fastscroll_popup_text_size">32sp</dimen>
+	<dimen name="fastscroll_thumb_min_width">0dp</dimen>
+	<dimen name="fastscroll_thumb_max_width">9dp</dimen>
+	<dimen name="fastscroll_thumb_height">72dp</dimen>
+	<dimen name="fastscroll_thumb_touch_inset">-24dp</dimen>
+
+    <!-- FORM MAIN (ALL FRAGMENTS) RESOURCE -->
+    <dimen name="fmd_all_empty_top_margin">32dp</dimen>
+    <dimen name="fmd_all_loading_splash_image_size">72dp</dimen>
+    <dimen name="fmd_all_loading_progressbar_size">24dp</dimen>
+    <dimen name="fmd_all_loading_text_size">12sp</dimen>
+
+    <!-- FORM MAIN (ITEM CONTACT HEADER) -->
+    <dimen name="fmd_item_header_horizontal_margin">16dp</dimen>
+    <dimen name="fmd_item_header_text_size">24sp</dimen>
+
+    <!-- FORM MAIN (ITEM CONTACT) -->
+    <dimen name="fmd_item_all_height">56dp</dimen>
+    <dimen name="fmd_item_alphabet_left_padding">56dp</dimen>
+    <dimen name="fmd_item_icon_size">40dp</dimen>
+    <dimen name="fmd_item_icon_margin_horizontal">16dp</dimen>
+    <dimen name="fmd_item_icon_text_size">24sp</dimen>
+    <dimen name="fmd_item_icon_border_width">1dp</dimen>
+    <dimen name="fmd_item_name_text_size">16sp</dimen>
+    <dimen name="fmd_item_name_desc_size">12sp</dimen>
+    <dimen name="fmd_item_button_box_size">56dp</dimen>
+    <dimen name="fmd_item_button_box_icon_size">24dp</dimen>
+    <dimen name="fmd_item_button_box_icon_horizontal_margin">16dp</dimen>
+
+    <!-- FORM MAIN (ITEM FAVORITE) -->
+    <dimen name="fmd_favorite_item_height">210dp</dimen>
+    <dimen name="fmd_favorite_item_margin">2dp</dimen>
+    <dimen name="fmd_favorite_item_text_box_height">68dp</dimen>
+    <dimen name="fmd_favorite_item_text_size">80sp</dimen>
+    <dimen name= "fmd_favorite_item_text_horizontal_margin">16dp</dimen>
+    <dimen name= "fmd_favorite_item_text_vertical_margin">16dp</dimen>
+    <dimen name="fmd_favorite_item_text_box_padding">16dp</dimen>
+    <dimen name="fmd_favorite_item_text_box_name_font_size">16sp</dimen>
+    <dimen name="fmd_favorite_item_text_box_desc_font_size">12sp</dimen>
+
+    <!-- ABOUT FORM -->
+    <dimen name="fad_items_margin">8dp</dimen>
 
     <!-- FORM SETTINGS -->
     <dimen name="settings_group_title_height">40dp</dimen>
@@ -30,51 +74,4 @@
     <dimen name="settings_item_account_icon_box_width">56dp</dimen>
     <dimen name="settings_item_account_text_size">13sp</dimen>
     <dimen name="settings_item_circle_size">48dp</dimen>
-
-    <!-- FORM MAIN (BASE_RECYCLER_FRAGMENT) -->
-    <dimen name="form_main_recycler_fragment_logo_size">72dp</dimen>
-    <dimen name="form_main_recycler_fragment_progressbar_size">24dp</dimen>
-    <dimen name="form_main_recycler_fragment_empty_text_top_margin">24dp</dimen>
-    <dimen name="form_main_recycler_fragment_loading_text_size">12sp</dimen>
-    <dimen name="form_main_recycler_fragment_recycler_top_margin">8dp</dimen>
-
-    <!-- FORM MAIN (ITEM CONTACT) -->
-    <dimen name="fm_item_contact_header_padding_horizontal">16dp</dimen>
-
-    <dimen name="fm_item_contact_alphabet_left_margin">72dp</dimen>
-    <dimen name="fm_item_contact_alphabet_right_margin">16dp</dimen>
-
-    <dimen name="form_main_item_contact_height">56dp</dimen>
-    <dimen name="form_main_item_contact_left_frame_box_width">56dp</dimen>
-    <dimen name="form_main_item_contact_left_frame_box_padding">16dp</dimen>
-    <dimen name="form_main_item_contact_left_frame_box_letter_size">24sp</dimen>
-    <dimen name="form_main_item_contact_left_frame_box_right_margin">16dp</dimen>
-
-    <dimen name="form_main_item_contact_right_frame_box_width">56dp</dimen>
-    <dimen name="form_main_item_contact_right_frame_box_icon_size">40dp</dimen>
-    <dimen name="form_main_item_contact_right_frame_box_icon_size_small">24dp</dimen>
-
-    <dimen name="form_main_item_contact_text_box_horizontal_margin">16dp</dimen>
-    <dimen name="form_main_item_contact_name_text_size">16sp</dimen>
-    <dimen name="form_main_item_contact_desc_text_size">14sp</dimen>
-
-    <!-- FORM MAIN (ITEM FAVORITE) -->
-    <dimen name="fm_item_favorite_box_padding">2dp</dimen>
-    <dimen name="fm_item_favorite_box_height">150dp</dimen>
-    <dimen name="fm_item_favorite_text_box_height">68dp</dimen>
-    <dimen name="fm_item_favorite_text_box_padding">16dp</dimen>
-    <dimen name="fm_item_favorite_text_box_name_font_size">16sp</dimen>
-    <dimen name="fm_item_favorite_text_box_desc_font_size">12sp</dimen>
-
-    <!-- FAST SCROLLER -->
-    <dimen name="fastscroll_popup_size">72dp</dimen>
-    <dimen name="fastscroll_popup_text_size">48dp</dimen>
-    <dimen name="fastscroll_thumb_min_width">0dp</dimen>
-    <dimen name="fastscroll_thumb_max_width">9dp</dimen>
-    <dimen name="fastscroll_thumb_height">72dp</dimen>
-    <dimen name="fastscroll_thumb_touch_inset">-24dp</dimen>
-
-
-
-
 </resources>

@@ -1,8 +1,18 @@
 <resources>
     <string name="app_name">Contacts</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="floating_action_button_behavior" translatable="false">ru.mdsps.contacts.core.views.FloatingActionButtonBehavior</string>
+
+    <!-- ACTIVITY TITLES -->
+    <string name="settings_activity_title">Settings</string>
+    <string name="about_activity_title">About</string>
+
+    <!-- MENU ACTIONS -->
     <string name="action_settings">Settings</string>
-    <string name="section_format" translatable="false">Hello World from section: %1$d</string>
-    <string name="title_activity_settings">SettingsActivity</string>
+    <string name="action_about">About</string>
+    <string name="action_search">Search</string>
+    <string name="action_change">Change</string>
 
     <!-- DIALOG BUTTONS -->
     <string name="dialog_button_ok">OK</string>
@@ -10,12 +20,81 @@
     <string name="dialog_button_yes">Yes</string>
     <string name="dialog_button_no">No</string>
 
-    <!-- FORM MAIN (FRAGMENT_RECYCLER) -->
-    <string name="form_main_recycler_fragment_loading">Loading…</string>
-    <string name="form_main_recycler_fragment_empty_contacts">Contacts not found</string>
-    <string name="form_main_recycler_fragment_empty_favorites">Favorites not found</string>
-    <string name="form_main_recycler_fragment_empty_categories">Categories not found</string>
+    <!-- FORM MAIN (ALL FRAGMENTS) RESOURCE -->
+    <string-array name="fms_section_names">
+        <item>Groups</item>
+        <item>Contacts</item>
+        <item>Favorites</item>
+    </string-array>
+    <string name="fms_all_empty_groups">Empty groups</string>
+    <string name="fms_all_empty_contacts">Empty contacts</string>
+    <string name="fms_all_empty_favorites">Empty favorites</string>
+    <string name="fms_all_loading">Loading…</string>
 
+    <!-- FORM ABOUT -->
+    <string name="fas_title">About program</string>
+    <string name="fas_authors">Used libraries</string>
+    <string name="fas_authors_text">
+        BetterVectorDrawable: Copyright © A-Student
+        \nMaterialProgressBar: Copyright © 2015 Zhang Hai
+        \nPicasso: Copyright © 2013 Square, Inc.
+        \nRippleEffect: Copyright © 2014 Robin Chutaux
+        \n
+    </string>
+    <string name="fas_version">Version: %1$s</string>
+    <string name="fas_copyright">Copyright © %1$d MD\'s Studio</string>
+    <string name="fas_all_rights_reserved">All rights reserved</string>
+
+    <!-- FORM SETTINGS (GENERAL SETTINGS) -->
+    <string name="settings_general_group_title">General settings</string>
+    <string name="settings_general_theme_title">Select theme</string>
+    <string name="settings_general_theme_colors">Colors</string>
+    <string-array name="settings_general_theme">
+        <item>Red Theme</item>
+        <item>Pink Theme</item>
+        <item>Purole Theme</item>
+        <item>Deep Purple Theme</item>
+        <item>Indigo Theme</item>
+        <item>Blue Theme</item>
+        <item>Light Blue Theme</item>
+        <item>Cyan Theme</item>
+        <item>Teal Theme</item>
+        <item>Green Theme</item>
+        <item>Light Green Theme</item>
+        <item>Lime Theme</item>
+        <item>Yellow Theme</item>
+        <item>Amber Theme</item>
+        <item>Orange Theme</item>
+        <item>Deep Orange Theme</item>
+        <item>Brown Theme</item>
+        <item>Grey Theme</item>
+        <item>Blue Grey Theme</item>
+    </string-array>
+    <string name="settings_general_show_account_title">Show account</string>
+    <string name="settings_general_show_account_desc">Show contacts from account</string>
+
+    <!-- FORM SETTINGS (CONTACT SETTINGS) -->
+    <string name="settings_contact_group_title">Contact settings</string>
+    <string name="settings_name_type_title">Select name type</string>
+    <string-array name="settings_name_type">
+        <item>Ivan Ivanovich Ivanov</item>
+        <item>Ivanov, Ivan Ivanovich</item>
+    </string-array>
+    <string name="settings_contact_item_type_tytle">Select contact item type</string>
+    <string-array name="settings_contact_item_type">
+        <item>Alphabetic</item>
+        <item>Button</item>
+    </string-array>
+    <string name="settings_contact_item_type_alphabetic">Cards with an alphabetical index</string>
+    <string name="settings_contact_item_type_button">Cards with call button</string>
+    <string name="settings_show_call_button_title">Show call button</string>
+    <string name="settings_show_call_button_desc">Show call button from contact item</string>
+
+    <!-- PHONE TYPES -->
+    <string name="types_mobile">Mobile</string>
+    <string name="types_home">Home</string>
+    <string name="types_work">Work</string>
+    <string name="types_other">Other</string>
 
     <!-- STRING ARRAYS -->
     <string-array name="alfabetic_array">
@@ -49,5 +128,4 @@
     </string-array>
 
 
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

@@ -13,6 +13,9 @@ public abstract class BaseObject {
     public static final int GROUP = 4;
     public static final int ORGANIZATION = 5;
     public static final int CONTACT_LIST_ITEM = 6;
+    public static final int PROFILE = 7;
+    public static final int ALPHABET_HEADER = 8;
+    public static final int LINEAR_HEADER = 9;
 
     public abstract String getItemPrimaryLabel();
 

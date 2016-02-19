@@ -1,20 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorPrimaryLight">@color/colorPrimaryLight</item>
-        <item name="colorAccent">@color/colorAccent</item>
-        <item name="colorControlNormal">@color/colorControlNormal</item>
-        <item name="colorControlActivated">@color/colorControlActivated</item>
-        <item name="colorSwitchThumbNormal">@color/colorSwitchThumbNormal</item>
-        <item name="android:windowBackground">@color/colorWindowBackground</item>
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-    </style>
+<resources
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <style name="AppTheme.Standard">
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/md_indigo_500</item>
         <item name="colorPrimaryDark">@color/md_indigo_700</item>
         <item name="colorPrimaryLight">@color/md_indigo_100</item>
@@ -23,6 +13,11 @@
         <item name="colorControlActivated">@color/md_indigo_400</item>
         <item name="colorSwitchThumbNormal">@color/md_indigo_300</item>
         <item name="colorWindowBackground">@color/md_indigo_50</item>
+        <item name="colorFastScrollerPopup">@color/md_indigo_T700</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowTranslucentStatus" tools:targetApi="kitkat">true</item>
+        <item name="android:windowTranslucentNavigation" tools:targetApi="kitkat">true</item>
     </style>
 
     <style name="AppTheme.Red">
@@ -34,6 +29,7 @@
         <item name="colorControlActivated">@color/md_red_400</item>
         <item name="colorSwitchThumbNormal">@color/md_red_300</item>
         <item name="colorWindowBackground">@color/md_red_50</item>
+        <item name="colorFastScrollerPopup">@color/md_red_T700</item>
     </style>
 
     <style name="AppTheme.Pink">
@@ -45,6 +41,7 @@
         <item name="colorControlActivated">@color/md_pink_400</item>
         <item name="colorSwitchThumbNormal">@color/md_pink_300</item>
         <item name="colorWindowBackground">@color/md_pink_50</item>
+        <item name="colorFastScrollerPopup">@color/md_pink_T700</item>
     </style>
 
     <style name="AppTheme.Purple">
@@ -56,6 +53,7 @@
         <item name="colorControlActivated">@color/md_purple_400</item>
         <item name="colorSwitchThumbNormal">@color/md_purple_300</item>
         <item name="colorWindowBackground">@color/md_purple_50</item>
+        <item name="colorFastScrollerPopup">@color/md_purple_T700</item>
     </style>
 
     <style name="AppTheme.Deep_Purple">
@@ -67,6 +65,7 @@
         <item name="colorControlActivated">@color/md_deep_purple_400</item>
         <item name="colorSwitchThumbNormal">@color/md_deep_purple_300</item>
         <item name="colorWindowBackground">@color/md_deep_purple_50</item>
+        <item name="colorFastScrollerPopup">@color/md_deep_purple_T700</item>
     </style>
 
     <style name="AppTheme.Indigo">
@@ -78,17 +77,19 @@
         <item name="colorControlActivated">@color/md_indigo_400</item>
         <item name="colorSwitchThumbNormal">@color/md_indigo_300</item>
         <item name="colorWindowBackground">@color/md_indigo_50</item>
+        <item name="colorFastScrollerPopup">@color/md_indigo_T700</item>
     </style>
 
     <style name="AppTheme.Blue">
         <item name="colorPrimary">@color/md_blue_500</item>
-        <item name="colorPrimaryDark">@color/md_indigo_700</item>
-        <item name="colorPrimaryLight">@color/md_indigo_100</item>
+        <item name="colorPrimaryDark">@color/md_blue_700</item>
+        <item name="colorPrimaryLight">@color/md_blue_100</item>
         <item name="colorAccent">@color/md_amber_500</item>
-        <item name="colorControlNormal">@color/md_indigo_200</item>
-        <item name="colorControlActivated">@color/md_indigo_400</item>
-        <item name="colorSwitchThumbNormal">@color/md_indigo_300</item>
-        <item name="colorWindowBackground">@color/md_indigo_50</item>
+        <item name="colorControlNormal">@color/md_blue_200</item>
+        <item name="colorControlActivated">@color/md_blue_400</item>
+        <item name="colorSwitchThumbNormal">@color/md_blue_300</item>
+        <item name="colorWindowBackground">@color/md_blue_50</item>
+        <item name="colorFastScrollerPopup">@color/md_blue_T700</item>
     </style>
 
     <style name="AppTheme.Light_Blue">
@@ -100,6 +101,7 @@
         <item name="colorControlActivated">@color/md_light_blue_400</item>
         <item name="colorSwitchThumbNormal">@color/md_light_blue_300</item>
         <item name="colorWindowBackground">@color/md_light_blue_50</item>
+        <item name="colorFastScrollerPopup">@color/md_light_blue_T700</item>
     </style>
 
     <style name="AppTheme.Cyan">
@@ -111,6 +113,7 @@
         <item name="colorControlActivated">@color/md_cyan_400</item>
         <item name="colorSwitchThumbNormal">@color/md_cyan_300</item>
         <item name="colorWindowBackground">@color/md_cyan_50</item>
+        <item name="colorFastScrollerPopup">@color/md_cyan_T700</item>
     </style>
 
     <style name="AppTheme.Teal">
@@ -122,6 +125,7 @@
         <item name="colorControlActivated">@color/md_teal_400</item>
         <item name="colorSwitchThumbNormal">@color/md_teal_300</item>
         <item name="colorWindowBackground">@color/md_teal_50</item>
+        <item name="colorFastScrollerPopup">@color/md_teal_T700</item>
     </style>
 
     <style name="AppTheme.Green">
@@ -133,6 +137,7 @@
         <item name="colorControlActivated">@color/md_green_400</item>
         <item name="colorSwitchThumbNormal">@color/md_green_300</item>
         <item name="colorWindowBackground">@color/md_green_50</item>
+        <item name="colorFastScrollerPopup">@color/md_green_T700</item>
     </style>
 
     <style name="AppTheme.Light_Green">
@@ -144,6 +149,7 @@
         <item name="colorControlActivated">@color/md_light_green_400</item>
         <item name="colorSwitchThumbNormal">@color/md_light_green_300</item>
         <item name="colorWindowBackground">@color/md_light_green_50</item>
+        <item name="colorFastScrollerPopup">@color/md_light_green_T700</item>
     </style>
 
     <style name="AppTheme.Lime">
@@ -155,6 +161,7 @@
         <item name="colorControlActivated">@color/md_lime_400</item>
         <item name="colorSwitchThumbNormal">@color/md_lime_300</item>
         <item name="colorWindowBackground">@color/md_lime_50</item>
+        <item name="colorFastScrollerPopup">@color/md_lime_T700</item>
     </style>
 
     <style name="AppTheme.Yellow">
@@ -166,6 +173,7 @@
         <item name="colorControlActivated">@color/md_yellow_400</item>
         <item name="colorSwitchThumbNormal">@color/md_yellow_300</item>
         <item name="colorWindowBackground">@color/md_yellow_50</item>
+        <item name="colorFastScrollerPopup">@color/md_yellow_T700</item>
     </style>
 
     <style name="AppTheme.Amber">
@@ -177,6 +185,7 @@
         <item name="colorControlActivated">@color/md_amber_400</item>
         <item name="colorSwitchThumbNormal">@color/md_amber_300</item>
         <item name="colorWindowBackground">@color/md_amber_50</item>
+        <item name="colorFastScrollerPopup">@color/md_amber_T700</item>
     </style>
 
     <style name="AppTheme.Orange">
@@ -188,6 +197,7 @@
         <item name="colorControlActivated">@color/md_orange_400</item>
         <item name="colorSwitchThumbNormal">@color/md_orange_300</item>
         <item name="colorWindowBackground">@color/md_orange_50</item>
+        <item name="colorFastScrollerPopup">@color/md_orange_T700</item>
     </style>
 
     <style name="AppTheme.Deep_Orange">
@@ -199,6 +209,7 @@
         <item name="colorControlActivated">@color/md_deep_orange_400</item>
         <item name="colorSwitchThumbNormal">@color/md_deep_orange_300</item>
         <item name="colorWindowBackground">@color/md_deep_orange_50</item>
+        <item name="colorFastScrollerPopup">@color/md_deep_orange_T700</item>
     </style>
 
     <style name="AppTheme.Brown">
@@ -210,6 +221,7 @@
         <item name="colorControlActivated">@color/md_brown_400</item>
         <item name="colorSwitchThumbNormal">@color/md_brown_300</item>
         <item name="colorWindowBackground">@color/md_brown_50</item>
+        <item name="colorFastScrollerPopup">@color/md_brown_T700</item>
     </style>
 
     <style name="AppTheme.Grey">
@@ -221,6 +233,7 @@
         <item name="colorControlActivated">@color/md_grey_400</item>
         <item name="colorSwitchThumbNormal">@color/md_grey_300</item>
         <item name="colorWindowBackground">@color/md_grey_50</item>
+        <item name="colorFastScrollerPopup">@color/md_grey_T700</item>
     </style>
 
     <style name="AppTheme.Blue_Grey">
@@ -232,6 +245,7 @@
         <item name="colorControlActivated">@color/md_blue_grey_400</item>
         <item name="colorSwitchThumbNormal">@color/md_blue_grey_300</item>
         <item name="colorWindowBackground">@color/md_blue_grey_50</item>
+        <item name="colorFastScrollerPopup">@color/md_blue_grey_T700</item>
     </style>
 
     <style name="AppTheme.NoActionBar">
@@ -242,8 +256,4 @@
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
-
-    <style name="AppTheme.BaseFabButton">
-        <item name="android:background">@color/colorPrimaryDark</item>
-    </style>
 </resources>

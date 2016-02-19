@@ -4,7 +4,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import ru.mdsps.contacts.core.base.BaseObject;
-import ru.mdsps.contacts.settings.Settings;
+import ru.mdsps.contacts.settings.SettingsProvider;
 
 
 public class ContactListItem extends BaseObject {
@@ -17,7 +17,6 @@ public class ContactListItem extends BaseObject {
     private String mMobileNumber;
     private String mPhotoUri;
     private String mThumbPhotoUri;
-    private Boolean mFirst;
 
     public ContactListItem(){
         setObjectType(CONTACT_LIST_ITEM);
@@ -72,10 +71,6 @@ public class ContactListItem extends BaseObject {
         return mThumbPhotoUri;
     }
 
-    public Boolean isFirst() {
-        return mFirst;
-    }
-
     public void setCID(Long mCID) {
         this.mCID = mCID;
     }
@@ -108,13 +103,10 @@ public class ContactListItem extends BaseObject {
         this.mThumbPhotoUri = mThumbPhotoUri;
     }
 
-    public void setFirst(Boolean mFirst) {
-        this.mFirst = mFirst;
-    }
 
     @Override
     public String getItemPrimaryLabel() {
-        Settings mSettings = new Settings();
+        SettingsProvider mSettings = new SettingsProvider();
         if(mSettings.getNameAlt() == 0){
             return getDisplayName();
         } else {

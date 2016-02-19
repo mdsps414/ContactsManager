@@ -1,22 +1,98 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Контакты</string>
-    <string name="action_settings">Настройки</string>
-    <string name="title_activity_settings">Настройки</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- ACTIVITY TITLES -->
+    <string name="settings_activity_title">Настройка</string>
+    <string name="about_activity_title">О программе</string>
+
+    <!-- MENU ACTIONS -->
+    <string name="action_settings">Настройка</string>
+    <string name="action_about">О программе</string>
+    <string name="action_search">Поиск</string>
+    <string name="action_change">Изменить</string>
 
     <!-- DIALOG BUTTONS -->
-    <string name="dialog_button_ok">Ok</string>
+    <string name="dialog_button_ok">OK</string>
     <string name="dialog_button_cancel">Отмена</string>
     <string name="dialog_button_yes">Да</string>
     <string name="dialog_button_no">Нет</string>
 
-    <!-- FORM MAIN (FRAGMENT_RECYCLER) -->
-    <string name="form_main_recycler_fragment_loading">Загрузка…</string>
-    <string name="form_main_recycler_fragment_empty_contacts">Список контактов пуст</string>
-    <string name="form_main_recycler_fragment_empty_favorites">Избранные контакты отсутствуют</string>
-    <string name="form_main_recycler_fragment_empty_categories">Категории отсутствуют</string>
+    <!-- FORM MAIN (ALL FRAGMENTS) RESOURCE -->
+    <string-array name="fms_section_names">
+        <item>Группы</item>
+        <item>Контакты</item>
+        <item>Избранные</item>
+    </string-array>
+    <string name="fms_all_empty_groups">Группы отсутствуют</string>
+    <string name="fms_all_empty_contacts">Контакты не найдены</string>
+    <string name="fms_all_empty_favorites">Избранные контакты не выбраны</string>
+    <string name="fms_all_loading">Загрузка…</string>
 
+    <!-- FORM ABOUT -->
+    <string name="fas_title">О программе</string>
+    <string name="fas_authors">Используемые библиотеки</string>
+    <string name="fas_authors_text">
+        BetterVectorDrawable: Copyright © A-Student
+        \nMaterialProgressBar: Copyright © 2015 Zhang Hai
+        \nPicasso: Copyright © 2013 Square, Inc.
+        \nRippleEffect: Copyright © 2014 Robin Chutaux
+        \n
+    </string>
+    <string name="fas_version">Версия: %1$s</string>
+    <string name="fas_copyright">Copyright © %1$d MD\'s Studio</string>
+    <string name="fas_all_rights_reserved">All rights reserved</string>
 
+    <!-- FORM SETTINGS (GENERAL SETTINGS) -->
+    <string name="settings_general_group_title">Основные настройки</string>
+    <string name="settings_general_theme_title">Выбор темы</string>
+    <string name="settings_general_theme_colors">Цвет</string>
+    <string-array name="settings_general_theme">
+        <item>Красная тема</item>
+        <item>Розовая тема</item>
+        <item>Фиолетовая тема</item>
+        <item>Тёмно-фиолетовая тема</item>
+        <item>Тема индиго</item>
+        <item>Синяя тема</item>
+        <item>Светло синяя тема</item>
+        <item>Голубая тема</item>
+        <item>Бирюзовая тема</item>
+        <item>Зелёная тема</item>
+        <item>Светло зелёная тема</item>
+        <item>Лимонная тема</item>
+        <item>Жёлтая тема</item>
+        <item>Янтарная тема</item>
+        <item>Оранжевая тема</item>
+        <item>Тёмно-оранжевая тема</item>
+        <item>Коричневая тема</item>
+        <item>Серая тема</item>
+        <item>Сине-серая тема</item>
+    </string-array>
+    <string name="settings_general_show_account_title">Выбор акаунтов</string>
+    <string name="settings_general_show_account_desc">Выбор акаунтов, контакты которых будут отображены</string>
+
+    <!-- FORM SETTINGS (CONTACT SETTINGS) -->
+    <string name="settings_name_type_title">Отображение имени контакта</string>
+    <string-array name="settings_name_type">
+        <item>Иван Иванович Иванов</item>
+        <item>Иванов, Иван Иванович</item>
+    </string-array>
+    <string name="settings_contact_item_type_tytle">Выберете тип карточки контакта</string>
+    <string-array name="settings_contact_item_type">
+        <item>С алфавитным указателем</item>
+        <item>С кнопкой вызова</item>
+    </string-array>
+    <string name="settings_contact_item_type_alphabetic">С алфавитным указателем</string>
+    <string name="settings_contact_item_type_button">С кнопкой вызова</string>
+    <string name="settings_show_call_button_title">Отображать кнопку</string>
+    <string name="settings_show_call_button_desc">Отображать кнопку вызова в карточке контакта</string>
+
+    <!-- PHONE TYPES -->
+    <string name="types_home">Домашний</string>
+    <string name="types_mobile">Мобильный</string>
+    <string name="types_other">Другой</string>
+    <string name="types_work">Рабочий</string>
 
     <!-- STRING ARRAYS -->
     <string-array name="alfabetic_array">
@@ -81,4 +157,6 @@
         <item>Z</item>
         <item>#</item>
     </string-array>
+
+
 </resources>

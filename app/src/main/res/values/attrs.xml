@@ -3,30 +3,17 @@
     <declare-styleable name="Theme">
         <attr name="colorPrimaryLight" format="color" />
         <attr name="colorWindowBackground" format="color" />
+		<attr name="colorFastScrollerPopup" format="color" />
     </declare-styleable>
-
-    <declare-styleable name="NestedScrollView">
-        <attr name="colorBackground" format="color" />
-    </declare-styleable>
-
-    <declare-styleable name="CircleTextView">
-        <attr name="text_color" format="integer"/>
-        <attr name="background_color" format="integer"/>
-        <attr name="text" format="string"/>
-        <attr name="text_size" format="dimension"/>
-        <attr name="border_color" format="integer"/>
-        <attr name="border_size" format="dimension"/>
-    </declare-styleable>
-
-    <declare-styleable name="FastScrollRecyclerView">
-        <attr name="fastScrollAlwaysEnabled" format="boolean"/>
-        <attr name="fastScrollThumbCurvatureEnabled" format="boolean"/>
-        <attr name="fastScrollThumbActiveColor" format="reference|color"/>
-        <attr name="fastScrollThumbInactiveColor" format="reference|color"/>
-        <attr name="fastScrollTrackColor" format="reference|color"/>
-        <attr name="fastScrollPopupBackgroundColor" format="reference|color"/>
-        <attr name="fastScrollPopupTextColor" format="reference|color"/>
-        <attr name="fastScrollHideDelay" format="integer"/>
-    </declare-styleable>
-
+	
+	<declare-styleable name="FastScrollRecyclerView">
+		<attr name="fastScrollAlwaysEnabled" format="boolean"/>
+		<attr name="fastScrollThumbCurvatureEnabled" format="boolean"/>
+		<attr name="fastScrollThumbActiveColor" format="reference|color"/>
+		<attr name="fastScrollThumbInactiveColor" format="reference|color"/>
+		<attr name="fastScrollTrackColor" format="reference|color"/>
+		<attr name="fastScrollPopupBackgroundColor" format="reference|color"/>
+		<attr name="fastScrollPopupTextColor" format="reference|color"/>
+		<attr name="fastScrollHideDelay" format="integer"/>
+	</declare-styleable>
 </resources>

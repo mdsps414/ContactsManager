@@ -1,11 +1,11 @@
 package ru.mdsps.contacts.core.base;
 
+
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.RecyclerView.LayoutManager;
-import android.support.v7.widget.RecyclerView.ItemAnimator;
-import android.support.v7.widget.RecyclerView.Adapter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,89 +14,73 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import ru.mdsps.contacts.R;
-import ru.mdsps.contacts.core.views.fastscroller.RecyclerViewFastScroller;
+import ru.mdsps.contacts.core.views.fastscroller.FastScrollRecyclerView;
 
 public abstract class BaseRecyclerFragment extends Fragment {
 
     private View mRootView;
-    private ViewStub mStub;
-    private LinearLayout mLoading;
-    private TextView mEmpty;
-    private int mEmptyText;
-    private RecyclerView mRecycler;
-    public RecyclerViewFastScroller mFastScroller;
+    private ViewStub mRecyclerStub;
+    private RecyclerView mRecyclerView;
+    private FastScrollRecyclerView mFastScroller;
+    private TextView mEmptyView;
+    private LinearLayout mProgressBox;
+    private int mEmptyTextResource;
     private boolean mShowFastScroller;
+
+    public BaseRecyclerFragment() {
+        // Required empty public constructor
+    }
+
+    public void setEmptyText(int textResource){
+        mEmptyTextResource = textResource;
+    }
+
+    public void setShowFastScroller(boolean show){
+        mShowFastScroller = show;
+    }
 
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        mRootView = inflater.inflate(R.layout.fragment_contact_list, container, false);
 
-        mStub = (ViewStub) mRootView.findViewById(R.id.stub_recyclerview);
-        mLoading = (LinearLayout) mRootView.findViewById(R.id.progress_box);
-        mEmpty = (TextView) mRootView.findViewById(R.id.empty_text);
-        mEmpty.setText(getString(mEmptyText));
-
-        if(mShowFastScroller){
-            mStub.setLayoutResource(R.layout.include_fast_scroller);
-            mStub.inflate();
-            mRecycler = (RecyclerView) mRootView.findViewById(R.id.contacts_recycler);
-            mFastScroller = (RecyclerViewFastScroller) mRootView.findViewById(R.id.contacts_fastscroller);
+        mRootView = inflater.inflate(R.layout.base_fragment_recycler, container, false);
+        mRecyclerStub = (ViewStub) mRootView.findViewById(R.id.recycler_stub);
+        mEmptyView = (TextView) mRootView.findViewById(R.id.empty);
+        mEmptyView.setText(getString(mEmptyTextResource));
+        mProgressBox = (LinearLayout) mRootView.findViewById(R.id.progress_box);
+        if(!mShowFastScroller){
+            mRecyclerStub.setLayoutResource(R.layout.stub_fragment_recycler_only);
+            mRecyclerStub.inflate();
+            mRecyclerView = (RecyclerView) mRootView.findViewById(R.id.recycler);
         } else {
-            mStub.setLayoutResource(R.layout.include_recycler_view);
-            mStub.inflate();
-            mRecycler = (RecyclerView) mRootView.findViewById(R.id.contacts_recycler);
+            mRecyclerStub.setLayoutResource(R.layout.stub_fragment_fastscroller_only);
+            mRecyclerStub.inflate();
+            mRecyclerView = (RecyclerView) mRootView.findViewById(R.id.recycler);
         }
 
         return mRootView;
     }
 
-    public void setEmptyText(int textResource){
-        mEmptyText = textResource;
+    public RecyclerView getRecyclerView(){
+        return mRecyclerView;
     }
 
-    public void showFastScroller(boolean show){
-        mShowFastScroller = show;
-    }
-
-    public void setupRecyclerView(Adapter adapter, LayoutManager layoutManager, ItemAnimator itemAnimator){
+    public void setupRecyclerView(RecyclerView.Adapter adapter){
         if(adapter.getItemCount() > 0){
-            if(!mShowFastScroller) {
-                mRecycler.setLayoutManager(layoutManager);
-                mRecycler.setItemAnimator(itemAnimator);
-                mRecycler.setAdapter(adapter);
-            } else {
-                mRecycler.setLayoutManager(layoutManager);
-                mRecycler.setItemAnimator(itemAnimator);
-                mRecycler.setAdapter(adapter);
-                mFastScroller.setRecyclerView(mRecycler);
-                mFastScroller.setViewsToUse(
-                        R.layout.fast_scroller_bubble,
-                        R.id.fastscroller_bubble,
-                        R.id.fastscroller_handle
-                );
-            }
-            mStub.setVisibility(View.VISIBLE);
-            mLoading.setVisibility(View.GONE);
-            mEmpty.setVisibility(View.GONE);
+            mRecyclerView.setAdapter(adapter);
+            mRecyclerStub.setVisibility(View.VISIBLE);
+            mProgressBox.setVisibility(View.GONE);
+            mEmptyView.setVisibility(View.GONE);
         } else {
-            mStub.setVisibility(View.GONE);
-            mLoading.setVisibility(View.GONE);
-            mEmpty.setVisibility(View.VISIBLE);
+            mRecyclerStub.setVisibility(View.GONE);
+            mProgressBox.setVisibility(View.GONE);
+            mEmptyView.setVisibility(View.VISIBLE);
         }
-
     }
 
-    public void addOnScrollListener(RecyclerView.OnScrollListener listener){
-        mRecycler.addOnScrollListener(listener);
-    }
 
-    public void addItemDecoration(RecyclerView.ItemDecoration decor){
-        mRecycler.addItemDecoration(decor);
-    }
 
-    public RecyclerView getRecycler(){
-        return mRecycler;
-    }
+
+
 }
