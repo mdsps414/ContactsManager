@@ -17,7 +17,6 @@ import java.util.HashMap;
 
 import ru.mdsps.contacts.R;
 import ru.mdsps.contacts.core.base.BaseObject;
-import ru.mdsps.contacts.core.model.ContactListHeader;
 import ru.mdsps.contacts.core.model.ContactListItem;
 import ru.mdsps.contacts.core.utility.AppUtility;
 import ru.mdsps.contacts.settings.SettingsProvider;
@@ -110,13 +109,15 @@ public class ContactListLoader extends AsyncTaskLoader<ArrayList<BaseObject>> {
                 RawContacts.ACCOUNT_TYPE
         };
         String mAccountTypes = null;
-        for(int i = 0; i < mShowAccounts.size(); i++){
-            String mName = mShowAccounts.get(i);
-            String[] mNameType = mName.split("@");
-            if(mAccountTypes == null){
-                mAccountTypes = "'" + mNameType[1] + "'";
-            } else {
-                mAccountTypes += ", '" + mNameType[1] + "'";
+        if(mShowAccounts != null) {
+            for (int i = 0; i < mShowAccounts.size(); i++) {
+                String mName = mShowAccounts.get(i);
+                String[] mNameType = mName.split("@");
+                if (mAccountTypes == null) {
+                    mAccountTypes = "'" + mNameType[1] + "'";
+                } else {
+                    mAccountTypes += ", '" + mNameType[1] + "'";
+                }
             }
         }
         if(mAccountTypes == null){
@@ -152,7 +153,7 @@ public class ContactListLoader extends AsyncTaskLoader<ArrayList<BaseObject>> {
         for(int i = 0; i < mRec.size(); i++){
             ContactListItem mItem = (ContactListItem) mRec.get(i);
             String mItemLetter = AppUtility.selLetter(mItem);
-            if(!mOldLetter.equals(mItemLetter)){
+            if(mOldLetter != null && !mOldLetter.equals(mItemLetter)){
                 mLetterMap.put(mItemLetter, i);
                 mOldLetter = mItemLetter;
             }
@@ -162,13 +163,10 @@ public class ContactListLoader extends AsyncTaskLoader<ArrayList<BaseObject>> {
         // Раскладываем список согласно алфавита
         for (String mLetter : mLetters) {
             if(mLetterMap.containsKey(mLetter)) {
-                //ContactListHeader mHeader = new ContactListHeader();
-                //mHeader.setHolderText(mLetter);
-                //mRecords.add(mHeader);
                 for (BaseObject mRecord : mRec) {
                     ContactListItem mItem = (ContactListItem) mRecord;
                     String mItemLetter = AppUtility.selLetter(mItem);
-                    if (mItemLetter.equals(mLetter)) {
+                    if (mItemLetter != null && mItemLetter.equals(mLetter)) {
                         mRecords.add(mItem);
                     }
                 }

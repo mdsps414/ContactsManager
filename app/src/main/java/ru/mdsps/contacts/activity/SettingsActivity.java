@@ -26,7 +26,7 @@ import ru.mdsps.contacts.settings.SettingsProvider;
 
 public class SettingsActivity extends BaseActivity implements View.OnClickListener, OnElementClickListener {
 
-    LinearLayout selTheme, selAccount, selNameType, selItemType, selShowCallButton;
+    LinearLayout selTheme, selAccount, selNameType, selShowCallButton;
     TextView txtTheme, txtNameType, txtItemType;
     CheckBox selShowCallButtonCheck;
     SettingsProvider mSettingsProvider;
@@ -62,9 +62,6 @@ public class SettingsActivity extends BaseActivity implements View.OnClickListen
         selNameType = (LinearLayout) findViewById(R.id.settings_name_type);
         selNameType.setOnClickListener(this);
         txtNameType = (TextView) findViewById(R.id.settings_name_type_desc);
-        selItemType = (LinearLayout) findViewById(R.id.settings_item_type);
-        selItemType.setOnClickListener(this);
-        txtItemType = (TextView) findViewById(R.id.settings_item_type_desc);
         selShowCallButton = (LinearLayout) findViewById(R.id.settings_show_call);
         selShowCallButton.setOnClickListener(this);
         selShowCallButtonCheck = (CheckBox) findViewById(R.id.settings_show_call_check);
@@ -79,8 +76,6 @@ public class SettingsActivity extends BaseActivity implements View.OnClickListen
         mColorList = AppContacts.getContext().getResources().getIntArray(R.array.settings_theme_color_array);
         String[] nameTypes = getResources().getStringArray(R.array.settings_name_type);
         txtNameType.setText(nameTypes[mSettingsProvider.getNameAlt()]);
-        String[] itemTypes = getResources().getStringArray(R.array.settings_contact_item_type);
-        txtItemType.setText(itemTypes[mSettingsProvider.getItemType()]);
         selShowCallButtonCheck.setChecked(mSettingsProvider.showCallButton());
         selAccounts = mSettingsProvider.getShowAccounts();
     }
@@ -138,26 +133,7 @@ public class SettingsActivity extends BaseActivity implements View.OnClickListen
                         .show();
 
                 break;
-            case R.id.settings_item_type: // Настройка вида записи контакта
-                new MaterialDialog.Builder(this)
-                        .title(R.string.settings_contact_item_type_tytle)
-                        .items(R.array.settings_contact_item_type)
-                        .itemsCallbackSingleChoice(mSettingsProvider.getItemType(), new MaterialDialog.ListCallbackSingleChoice() {
-                            @Override
-                            public boolean onSelection(MaterialDialog dialog, View itemView, int which, CharSequence text) {
-                                mSettingsProvider.setItemType(which);
-                                txtItemType.setText(text);
-                                if(which == 1){
-                                    selShowCallButton.setEnabled(true);
-                                } else {
-                                    selShowCallButton.setEnabled(false);
-                                }
-                                return true;
-                            }
-                        })
-                        .positiveText(R.string.dialog_button_ok)
-                        .show();
-                break;
+
             case R.id.settings_show_call: // Настройка вывода кнопки звонка с картинки контакта
                 selShowCallButtonCheck.setChecked(!mSettingsProvider.showCallButton());
                 mSettingsProvider.setShowCallButton(selShowCallButtonCheck.isChecked());

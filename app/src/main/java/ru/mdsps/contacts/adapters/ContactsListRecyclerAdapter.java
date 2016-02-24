@@ -24,12 +24,10 @@ public class ContactsListRecyclerAdapter extends RecyclerView.Adapter<RecyclerVi
 
     ArrayList<BaseObject> mRecords;
     SettingsProvider mSettings;
-    int mViewMode = 0;
 
     public ContactsListRecyclerAdapter(ArrayList<BaseObject> records){
         mRecords = records;
         mSettings = new SettingsProvider();
-        mViewMode = mSettings.getItemType();
     }
 
     @Override
@@ -58,7 +56,7 @@ public class ContactsListRecyclerAdapter extends RecyclerView.Adapter<RecyclerVi
 
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View mView = null;
+        View mView;
         switch (viewType){
             case BaseObject.ALPHABET_HEADER:
                 mView = LayoutInflater.from(parent.getContext())
@@ -66,17 +64,8 @@ public class ContactsListRecyclerAdapter extends RecyclerView.Adapter<RecyclerVi
                 return new LinearHeaderViewHolder(mView);
 
             case BaseObject.CONTACT_LIST_ITEM:
-                switch(mViewMode){
-                    case 0:
-                        mView = LayoutInflater.from(parent.getContext())
-                                .inflate(R.layout.item_contact_list_alphabet, parent, false);
-                        break;
-                    case 1:
-                        mView = LayoutInflater.from(parent.getContext())
-                                .inflate(R.layout.item_contact_list, parent, false);
-                        break;
-                }
-
+                mView = LayoutInflater.from(parent.getContext())
+                        .inflate(R.layout.item_contact_list_alphabet, parent, false);
                 return new LinearViewHolder(mView);
         }
         return null;
@@ -128,6 +117,7 @@ public class ContactsListRecyclerAdapter extends RecyclerView.Adapter<RecyclerVi
     @Override
     public String getSectionName(int position) {
         ContactListItem mRecord = (ContactListItem) mRecords.get(position);
-        return AppUtility.selLetter(mRecord);
+        String mLetter =  AppUtility.selLetter(mRecord) != null ? AppUtility.selLetter(mRecord) : "#";
+        return mLetter;
     }
 }

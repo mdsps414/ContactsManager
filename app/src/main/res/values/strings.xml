@@ -31,6 +31,16 @@
     <string name="fms_all_empty_favorites">Empty favorites</string>
     <string name="fms_all_loading">Loading…</string>
 
+    <!-- FORM MAIN (ITEM GROUP) RESOURCE -->
+    <plurals name="group_contacts_counter">
+        <item quantity="zero">No contacts</item>
+        <item quantity="one">%1$d contact</item>
+        <item quantity="two">%1$d contacts</item>
+        <item quantity="few">%1$d contacts</item>
+        <item quantity="many">%1$d contacts</item>
+        <item quantity="other">%1$d contacts</item>
+    </plurals>
+
     <!-- FORM ABOUT -->
     <string name="fas_title">About program</string>
     <string name="fas_authors">Used libraries</string>

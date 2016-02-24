@@ -87,7 +87,7 @@ public class AppUtility {
         }
 
         // Добавляем акаунт телефона
-        Drawable icon = ContextCompat.getDrawable(context, R.drawable.vector_ic_call_grey);
+        Drawable icon = ContextCompat.getDrawable(context, R.drawable.vector_ic_phone_android_grey);
         AccountData phone = new AccountData("Phone", "Local Phone Account", "Local Phone", icon);
         mAccountList.add(0, phone);
 

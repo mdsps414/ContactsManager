@@ -47,6 +47,16 @@
     <dimen name="fmd_favorite_item_text_box_name_font_size">16sp</dimen>
     <dimen name="fmd_favorite_item_text_box_desc_font_size">12sp</dimen>
 
+    <!-- FORM MAIN (ITEM GROUP) -->
+    <dimen name="fmd_group_item_account_icon_size">24dp</dimen>
+    <dimen name="fmd_group_contact_item_height">48dp</dimen>
+    <dimen name="fmd_group_contact_item_icon_size">32dp</dimen>
+    <dimen name="fmd_group_contact_item_button_box_size">48dp</dimen>
+    <dimen name="fmd_group_contact_item_icon_margin_left">8dp</dimen>
+    <dimen name="fmd_group_contact_item_icon_margin_right">16dp</dimen>
+    <dimen name="fmd_group_contact_item_icon_text_size">18sp</dimen>
+    <dimen name="fmd_group_contact_item_icon_margin">32dp</dimen>
+
     <!-- ABOUT FORM -->
     <dimen name="fad_items_margin">8dp</dimen>
 

@@ -30,6 +30,16 @@
     <string name="fms_all_empty_favorites">Избранные контакты не выбраны</string>
     <string name="fms_all_loading">Загрузка…</string>
 
+    <!-- FORM MAIN (ITEM GROUP) RESOURCE -->
+    <plurals name="group_contacts_counter">
+        <item quantity="zero">Нет контактов</item>
+        <item quantity="one">%1$d запись</item>
+        <item quantity="two">%1$d записи</item>
+        <item quantity="few">%1$d записи</item>
+        <item quantity="many">%1$d записей</item>
+        <item quantity="other">%1$d записей</item>
+    </plurals>
+
     <!-- FORM ABOUT -->
     <string name="fas_title">О программе</string>
     <string name="fas_authors">Используемые библиотеки</string>

@@ -1,6 +1,7 @@
 package ru.mdsps.contacts.core.model;
 
 import android.graphics.Bitmap;
+import android.graphics.drawable.Drawable;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -11,16 +12,13 @@ public class Group extends BaseObject {
 
     private int mGroupId;
     private String mTitle;
-    private Bitmap mImage;
+    private int mCountItem;
+    private Drawable mImage;
+    private String mAccountName;
+    private String mAccountType;
+    private boolean mExpanded;
 
     public Group(){
-        setObjectType(GROUP);
-    }
-
-    public Group(int groupId, String title) {
-        this.mGroupId = groupId;
-        this.mTitle = title;
-        this.mImage = null;
         setObjectType(GROUP);
     }
 
@@ -51,12 +49,44 @@ public class Group extends BaseObject {
         this.mTitle = title;
     }
 
-    public Bitmap getImage() {
+    public Drawable getImage() {
         return mImage;
     }
 
-    public void setImage(Bitmap mImage) {
+    public void setImage(Drawable mImage) {
         this.mImage = mImage;
+    }
+
+    public int getCountItem() {
+        return mCountItem;
+    }
+
+    public void setCountItem(int mCountItem) {
+        this.mCountItem = mCountItem;
+    }
+
+    public String getAccountName() {
+        return mAccountName;
+    }
+
+    public void setAccountName(String mAccountName) {
+        this.mAccountName = mAccountName;
+    }
+
+    public String getAccountType() {
+        return mAccountType;
+    }
+
+    public boolean isExpanded() {
+        return mExpanded;
+    }
+
+    public void setExpanded(boolean mExpanded) {
+        this.mExpanded = mExpanded;
+    }
+
+    public void setAccountType(String mAccountType) {
+        this.mAccountType = mAccountType;
     }
 
     @Override
@@ -76,7 +106,6 @@ public class Group extends BaseObject {
         try {
             res.put("mGroupId", getGroupId());
             res.put("mTitle", getTitle());
-            res.put("mImage", getImage().toString());
         } catch (JSONException e) {
             e.printStackTrace();
         }

@@ -13,6 +13,7 @@ import ru.mdsps.contacts.core.base.BaseObject;
 import ru.mdsps.contacts.core.model.ContactListItem;
 import ru.mdsps.contacts.core.utility.AppUtility;
 import ru.mdsps.contacts.core.utility.FileUtility;
+import ru.mdsps.contacts.settings.SettingsProvider;
 
 public class LinearViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
 
@@ -41,7 +42,12 @@ public class LinearViewHolder extends RecyclerView.ViewHolder implements View.On
         this.mRecord = (ContactListItem) record;
 
         mItemName.setText(AppUtility.selName(mRecord));
-        mItemDesc.setText(mRecord.getMobileNumber());
+        if(mRecord.getMobileNumber() != null) {
+            mItemDesc.setText(mRecord.getMobileNumber());
+            mItemDesc.setVisibility(View.VISIBLE);
+        } else {
+            mItemDesc.setVisibility(View.GONE);
+        }
         mLetter.setText(AppUtility.selLetter(mRecord));
         if(mRecord.getPhotoUri() != null){
             if(FileUtility.checkFile(String.valueOf(mRecord.getCID()))){
@@ -63,5 +69,12 @@ public class LinearViewHolder extends RecyclerView.ViewHolder implements View.On
             mItemIcon.setImageBitmap(AppUtility.generateBitmap());
             mLetter.setVisibility(View.VISIBLE);
         }
+        SettingsProvider mSettings = new SettingsProvider();
+        if(!mSettings.showCallButton()){
+            mButton.setVisibility(View.INVISIBLE);
+        } else {
+            mButton.setVisibility(View.VISIBLE);
+        }
+
     }
 }

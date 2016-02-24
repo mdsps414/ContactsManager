@@ -216,7 +216,7 @@
                 android:layout_width="match_parent"
                 android:background="@drawable/linear_divider_horizontal"
                 android:layout_marginLeft="@dimen/settings_group_title_icon_horizontal_margin"
-                android:layout_marginRight="@dimen/settings_group_title_icon_horizontal_margin" />.
+                android:layout_marginRight="@dimen/settings_group_title_icon_horizontal_margin" />
 
             <com.andexert.library.RippleView
                 android:layout_width="match_parent"
@@ -273,60 +273,12 @@
                 </LinearLayout>
             </com.andexert.library.RippleView>
 
-            <com.andexert.library.RippleView
+            <View
+                android:layout_height="3dp"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/settings_item_heights"
-                app:rv_color="@color/md_teal_300"
-                app:rv_type="rectangle">
-
-                <LinearLayout
-                    android:id="@+id/settings_item_type"
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <LinearLayout
-                        android:orientation="vertical"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="4"
-                        android:layout_gravity="center_vertical"
-                        android:layout_marginLeft="@dimen/settings_item_text_box_horizontal_margin">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textAppearance="?android:attr/textAppearanceLarge"
-                            android:text="@string/settings_contact_item_type_tytle"
-                            android:textSize="@dimen/settings_item_title_text_size"
-                            android:id="@+id/settings_item_type_title" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textAppearance="?android:attr/textAppearanceSmall"
-                            android:text="Small Text"
-                            android:textSize="@dimen/settings_item_description_text_size"
-                            android:id="@+id/settings_item_type_desc" />
-                    </LinearLayout>
-
-                    <FrameLayout
-                        android:layout_width="@dimen/settings_item_change_box_width"
-                        android:layout_height="@dimen/settings_item_change_box_height"
-                        android:paddingLeft="@dimen/settings_item_change_box_padding"
-                        android:paddingTop="@dimen/settings_item_change_box_padding"
-                        android:paddingRight="@dimen/settings_item_change_box_padding"
-                        android:paddingBottom="@dimen/settings_item_change_box_padding">
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:contentDescription="@string/settings_name_type_title"
-                            android:src="@drawable/vector_ic_keyboard_arrow_right_grey" />
-                    </FrameLayout>
-
-                </LinearLayout>
-            </com.andexert.library.RippleView>
+                android:background="@drawable/linear_divider_horizontal"
+                android:layout_marginLeft="@dimen/settings_group_title_icon_horizontal_margin"
+                android:layout_marginRight="@dimen/settings_group_title_icon_horizontal_margin" />
 
             <com.andexert.library.RippleView
                 android:layout_width="match_parent"

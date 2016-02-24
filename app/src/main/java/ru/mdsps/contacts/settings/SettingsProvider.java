@@ -67,14 +67,6 @@ public class SettingsProvider {
         mEditor.putInt(NAME_ALT, val).apply();
     }
 
-    private final String CONTACT_ITEM_TYPE = "CONTACT_ITEM_TYPE";
-    public int getItemType(){
-        return mPreferences.getInt(CONTACT_ITEM_TYPE,0);
-    }
-    public void setItemType(int val){
-        mEditor.putInt(CONTACT_ITEM_TYPE, val).apply();
-    }
-
     private final String SHOW_CALL_BUTTON = "SHOW_CALL_BUTTON";
     public boolean showCallButton(){ return mPreferences.getBoolean(SHOW_CALL_BUTTON, false); }
     public void setShowCallButton(boolean val){
